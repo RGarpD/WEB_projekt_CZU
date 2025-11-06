@@ -1,0 +1,264 @@
+/* =============================
+   Moje klinika - studentská verze
+   Autor: já :)
+   ============================= */
+
+/* základní proměnné (barvy, max šířka) */
+:root {
+    --barva-text: #1c232b;
+    --barva-seda: #5a6773;
+    --barva-hrana: #e2e6ec;
+    --barva-pozadi: #fff;
+    --barva-box: #f6f8fb;
+    --barva-modra: #0a84ff;
+    --barva-modra-tmava: #005fcc;
+    --max: 68rem;
+    --radius: 10px;
+}
+
+/* reset + základ */
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: system-ui, Arial, sans-serif;
+    color: var(--barva-text);
+    background: var(--barva-pozadi);
+    line-height: 1.6;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: var(--barva-modra); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* HLAVIČKA */
+.hlavicka {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nazev {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* hamburger tlačítko */
+.hamburger {
+    width: 44px;
+    height: 36px;
+    border: 1px solid var(--barva-hrana);
+    border-radius: 8px;
+    background: var(--barva-box);
+    display: grid;
+    place-content: center;
+    gap: 3px;
+    cursor: pointer;
+}
+.hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--barva-text);
+}
+
+/* MENU */
+.menu {
+    background: var(--barva-box);
+    border-top: 1px solid var(--barva-hrana);
+}
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: grid;
+    gap: 8px;
+}
+.menu a {
+    display: block;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid var(--barva-hrana);
+    border-radius: 8px;
+    color: var(--barva-text);
+    background: #fff;
+}
+.menu a:hover {
+    background: #eef2f7;
+}
+
+/* kontakt + jazyk */
+.kontaktni-pruh {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.telefon {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.ikona {
+    width: 20px;
+    height: 20px;
+    fill: var(--barva-text);
+}
+.cislo { font-weight: bold; color: var(--barva-text); }
+.jazyk a {
+    color: var(--barva-text);
+    padding: 2px 6px;
+    border: 1px solid var(--barva-hrana);
+    border-radius: 6px;
+}
+
+/* tlačítko objednat */
+.objednat {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 10px 10px;
+}
+.tlacitko {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: var(--barva-modra);
+    color: #fff;
+}
+.tlacitko:hover { background: var(--barva-modra-tmava); }
+
+/* hlavní obsah */
+.obal {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* sekce o klinice */
+.o-klinice {
+    padding: 10px 0;
+}
+
+/* sekce ředitelka */
+.reditelka {
+    padding: 16px 0;
+    border-top: 1px solid var(--barva-hrana);
+}
+.reditelka-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+.foto-reditelky img {
+    border-radius: var(--radius);
+}
+.bio {
+    background: var(--barva-box);
+    padding: 10px;
+    border-radius: var(--radius);
+}
+.kontakt-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #eef2f7;
+    padding: 10px;
+    border: 1px solid var(--barva-hrana);
+    border-radius: var(--radius);
+}
+.karta {
+    background: var(--barva-box);
+    border: 1px solid var(--barva-hrana);
+    border-radius: var(--radius);
+    padding: 10px;
+}
+
+/* služby */
+.sluzby {
+    padding: 16px 0;
+    border-top: 1px solid var(--barva-hrana);
+}
+.sluzby-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+.sluzba h3 {
+    margin: 4px 0;
+}
+.velka { grid-column: span 1; }
+
+/* otevírací doba */
+.oteviraci-doba {
+    padding: 16px 0;
+    border-top: 1px solid var(--barva-hrana);
+}
+.tabulka {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--barva-hrana);
+}
+.tabulka th, .tabulka td {
+    padding: 8px;
+    border-bottom: 1px solid var(--barva-hrana);
+    text-align: left;
+}
+.tabulka thead {
+    background: #eef2f7;
+}
+
+/* patička */
+.paticka {
+    margin-top: 20px;
+    border-top: 1px solid var(--barva-hrana);
+    max-width: var(--max);
+    margin-inline: auto;
+    padding: 12px 10px;
+}
+.paticka-odkazy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* responzivní úpravy */
+@media (min-width: 640px) {
+    .reditelka-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+      "foto bio"
+      "poznamka kontakt"
+      "tip kontakt";
+    }
+    .foto-reditelky { grid-area: foto; }
+    .bio { grid-area: bio; }
+    .poznamka { grid-area: poznamka; }
+    .tip { grid-area: tip; }
+    .kontakt-reditelky { grid-area: kontakt; }
+
+    .sluzby-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .velka { grid-column: span 2; }
+}
+
+@media (min-width: 960px) {
+    .hamburger { display: none; }
+    .menu { background: transparent; border: 0; }
+    .menu[hidden] { display: block !important; }
+    .menu ul { display: flex; gap: 12px; padding: 0; }
+    .menu a { padding: 6px 8px; border: 0; background: transparent; }
+    .menu a:hover { background: #eef2f7; border-radius: 6px; }
+
+    .sluzby-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .velka { grid-column: span 2; }
+}
