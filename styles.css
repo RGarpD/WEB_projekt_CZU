@@ -37,11 +37,15 @@ a:hover { text-decoration: underline; }
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 .logo-box {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+.logo-box a img {
+    cursor: pointer;
 }
 .nazev {
     font-weight: bold;
@@ -50,13 +54,15 @@ a:hover { text-decoration: underline; }
 
 /* hamburger tlačítko */
 .hamburger {
-    width: 44px;
+    width: 40px;
     height: 36px;
     border: 1px solid var(--barva-hrana);
-    border-radius: 8px;
+    border-radius: 6px;
     background: var(--barva-box);
-    display: grid;
-    place-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 3px;
     cursor: pointer;
 }
@@ -69,22 +75,31 @@ a:hover { text-decoration: underline; }
 
 /* MENU */
 .menu {
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    width: 160px;
     background: var(--barva-box);
-    border-top: 1px solid var(--barva-hrana);
+    border: 1px solid var(--barva-hrana);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    z-index: 100;
 }
 .menu ul {
     list-style: none;
     margin: 0;
-    padding: 10px;
-    display: grid;
-    gap: 8px;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 .menu a {
     display: block;
-    padding: 12px;
+    padding: 8px;
     text-align: center;
+    font-size: 1rem;
     border: 1px solid var(--barva-hrana);
-    border-radius: 8px;
+    border-radius: 6px;
     color: var(--barva-text);
     background: #fff;
 }
@@ -251,10 +266,25 @@ a:hover { text-decoration: underline; }
 
 @media (min-width: 960px) {
     .hamburger { display: none; }
-    .menu { background: transparent; border: 0; }
+    .menu {
+        background: transparent;
+        border: none;
+        position: static;
+        width: auto;
+        box-shadow: none;
+    }
     .menu[hidden] { display: block !important; }
-    .menu ul { display: flex; gap: 12px; padding: 0; }
-    .menu a { padding: 6px 8px; border: 0; background: transparent; }
+    .menu ul {
+        flex-direction: row;
+        gap: 12px;
+        padding: 0;
+    }
+    .menu a {
+        padding: 6px 8px;
+        border: none;
+        background: transparent;
+
+    }
     .menu a:hover { background: #eef2f7; border-radius: 6px; }
 
     .sluzby-grid {
