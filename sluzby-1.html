@@ -115,12 +115,35 @@
 
     <!-- PATIČKA -->
     <footer class="paticka">
-        <p>&copy; <span id="rok"></span> Moje klinika</p>
-        <nav class="paticka-odkazy">
-            <a href="#">Zásady ochrany osobních údajů</a>
-            <a href="#">Mapa stránek</a>
-            <a href="#">Nahoru</a>
-        </nav>
+        <div class="container grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem">
+            <div>
+                <p>&copy; <span id="rok"></span> Moje klinika</p>
+                <p class="muted">Moderní ambulantní péče v centru Prahy.</p>
+            </div>
+            <div>
+                <p style="font-weight:600">Kontakty</p>
+                <ul class="list-reset muted">
+                    <li>+420 222 111 222</li>
+                    <li>info@mojeklinika.cz</li>
+                    <li>U Zdraví 12, Praha 1</li>
+                </ul>
+            </div>
+            <div>
+                <p style="font-weight:600">Rychlé odkazy</p>
+                <ul class="list-reset">
+                    <!--            dod2lat                   -->
+                    <li><a href="./sluzby.html">Služby</a></li>
+                    <li><a href="./objednat.html">Rezervace</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">Ochrana osobních údajů</a></li>
+                </ul>
+            </div>
+            <div>
+                <p style="font-weight:600">Otevírací doba recepce</p>
+                <p class="muted">Po–Pá 7:30–17:30</p>
+                <p class="muted" style="font-size:.85rem;margin-top:1rem">© <span id="year"></span> MojeKlinika. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
     </footer>
 
     <!-- jednoduchý skript pro menu a rok -->
