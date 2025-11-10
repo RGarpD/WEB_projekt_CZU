@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moje klinika – Domů</title>
+    <link rel="icon" href="./logo.png" type="image/png">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <!-- HLAVIČKA -->
+    <header class="hlavicka">
+        <div class="logo-box">
+            <a href="./index.html">
+                <img src="./logo.png" alt="Logo kliniky" width="592">
+            </a>
+        </div>
+
+        <!-- tlačítko menu (hamburger) -->
+        <button id="tlacitkoMenu" class="hamburger">
+            <span></span><span></span><span></span>
+        </button>
+
+        <!-- navigace -->
+        <nav id="navigace" class="menu" hidden>
+            <ul>
+                <!--          DODĚLAT HREF!!!!!!!                   -->
+                <li><a href="./index.html">Domů</a></li>
+                <li><a href="#">Služby</a></li>
+                <li><a href="#">Tým</a></li>
+                <li><a href="#">Ceník</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- kontakt + jazyk -->
+    <section class="kontaktni-pruh">
+        <div class="telefon">
+            <svg viewBox="0 0 24 24" class="ikona"><path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2a1.3 1.3 0 011.4-.3 10.4 10.4 0 003.2.5 1.3 1.3 0 011.3 1.3v3.8a1.3 1.3 0 01-1.3 1.3A19.6 19.6 0 012 4.3 1.3 1.3 0 013.3 3h3.8A1.3 1.3 0 018.4 4.3c0 1.1.2 2.2.5 3.2.2.5 0 1.1-.3 1.4L6.6 10.8z" /></svg>
+            <a href="tel:+420111222111" class="cislo">+420 111 222 111</a>
+        </div>
+
+        <div class="jazyk">
+            <a href="#">CZ</a> / <a href="#">EN</a>
+        </div>
+    </section>
+
+    <!-- hlavní tlačítko -->
+    <div class="objednat">
+        <a class="tlacitko" href="./objednat.html">Objednat se</a>
+    </div>
+
+    <section class="rezervace-uvod">
+        <h1>Rezervace</h1>
+    </section>
+
+    <!-- Rezervace -->
+    <section id="rezervace" class="section surface">
+
+        <aside class="card">
+            <h3 style="margin:0 0 .5rem">Jak to probíhá</h3>
+            <ol class="steps">
+                <li>Vyplníš formulář a odešleš.</li>
+                <li>Recepce potvrdí termín SMS/e‑mailem.</li>
+                <li>Dostaneš připomínku den předem.</li>
+            </ol>
+        </aside>
+
+        <div class="container grid grid-2" style="align-items:start">
+            <div>
+                <h2 class="title" style="font-size:clamp(1.5rem,2vw,2rem)">Rychlá rezervace termínu</h2>
+                <p class="subtitle">Vyplňte údaje a my se vám ozveme s potvrzením.</p>
+                <form class="card" onsubmit="event.preventDefault(); alert('Děkuji! Ozveme se vám.');">
+                    <div style="display:grid;gap:.75rem">
+                        <div style="display:grid;gap:.75rem;grid-template-columns:1fr;}">
+                            <label>
+                                <span class="muted" style="font-size:.9rem">Jméno a příjmení</span>
+                                <input required type="text" placeholder="Např. Jana Nováková" style="width:100%;padding:.7rem .9rem;border:1px solid var(--ring);border-radius:.65rem" />
+                            </label>
+                            <label>
+                                <span class="muted" style="font-size:.9rem">Telefon</span>
+                                <input required type="tel" placeholder="+420 ..." style="width:100%;padding:.7rem .9rem;border:1px solid var(--ring);border-radius:.65rem" />
+                            </label>
+                        </div>
+                        <label>
+                            <span class="muted" style="font-size:.9rem">E‑mail</span>
+                            <input type="email" placeholder="vaše@adresa.cz" style="width:100%;padding:.7rem .9rem;border:1px solid var(--ring);border-radius:.65rem" />
+                        </label>
+                        <label>
+                            <span class="muted" style="font-size:.9rem">Důvod návštěvy</span>
+                            <input type="text" placeholder="Preventivní prohlídka, očkování…" style="width:100%;padding:.7rem .9rem;border:1px solid var(--ring);border-radius:.65rem" />
+                        </label>
+                        <label>
+                            <span class="muted" style="font-size:.9rem">Poznámka (volitelné)</span>
+                            <textarea rows="4" placeholder="Upřesnění požadavku" style="width:100%;padding:.7rem .9rem;border:1px solid var(--ring);border-radius:.65rem;resize:vertical"></textarea>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--muted)">
+                            <input type="checkbox" required /> Souhlasím se zpracováním osobních údajů
+                        </label>
+                        <button class="btn" type="submit">Odeslat</button>
+                    </div>
+                </form>
+            </div>
+
+
+            <aside class="card">
+                <h3 style="margin:1rem 0 .5rem">Kde nás najdeš</h3>
+                <div class="mapa-box">
+                    <iframe src="https://www.google.com/maps?q=U%20Zdrav%C3%AD%2012%2C%20Praha%201&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p class="muted" style="font-size:.95rem;margin-top:.75rem">
+                    <strong>Adresa:</strong> U Zdraví 12, Praha 1<br>
+                    <strong>Telefon:</strong> <a href="tel:+420111222111">+420 111 222 111</a><br>
+                    <strong>E‑mail:</strong> <a href="mailto:info@mojeklinika.cz">info@mojeklinika.cz</a>
+                </p>
+            </aside>
+        </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section id="faq" style="padding:12px 0">
+        <h2>Časté dotazy</h2>
+        <details class="karta"><summary><strong>Berete nové pacienty?</strong></summary><p class="muted">Ano, stačí poslat žádost přes formulář.</p></details>
+        <details class="karta"><summary><strong>Je možné vyšetření bez pojištění?</strong></summary><p class="muted">Ano, nabízíme i samopláteckou péči – ozvi se recepci.</p></details>
+    </section>
+    </main>
+
+    <!-- PATIČKA -->
+    <footer class="paticka">
+        <p>&copy; <span id="rok"></span> Moje klinika</p>
+        <nav class="paticka-odkazy">
+            <a href="#">Zásady ochrany osobních údajů</a>
+            <a href="#">Mapa stránek</a>
+            <a href="#">Nahoru</a>
+        </nav>
+    </footer>
+
+    <!-- jednoduchý skript pro menu a rok -->
+    <script>
+        const tlacitko = document.getElementById('tlacitkoMenu');
+        const nav = document.getElementById('navigace');
+
+        tlacitko.addEventListener('click', () => {
+            const otevrene = tlacitko.getAttribute('data-open') === '1';
+            tlacitko.setAttribute('data-open', otevrene ? '0' : '1');
+            if (otevrene) nav.setAttribute('hidden', '');
+            else nav.removeAttribute('hidden');
+        });
+
+        document.getElementById('rok').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
