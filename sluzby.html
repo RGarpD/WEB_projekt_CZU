@@ -7,110 +7,6 @@
     <link rel="icon" href="./logo.png" type="image/png">
     <link rel="stylesheet" href="./styles.css">
     <style>
-        /* Bubliny – tři v řadě */
-        .bubliny-sluzby {
-            text-align: center;
-            padding: 3rem 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-            .bubliny-sluzby h2 {
-                font-size: 2rem;
-                color: #0d9ef0;
-                margin-bottom: .5rem;
-            }
-
-            .bubliny-sluzby p {
-                color: #4b5563;
-                margin-bottom: 2rem;
-                font-size: 1.05rem;
-            }
-
-        .bubliny-grid {
-            display: grid;
-            gap: 1.8rem;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        }
-
-        /* karta služby */
-        .bublina {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 1.2rem;
-            padding: 1.8rem 1.2rem 2.2rem;
-            text-align: center;
-            transition: transform .25s, box-shadow .25s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-            .bublina:hover {
-                transform: translateY(-4px);
-                box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-            }
-
-            /* obrázek nahoře */
-            .bublina img {
-                width: 90px;
-                height: 90px;
-                object-fit: cover;
-                border-radius: 50%;
-                margin: 0 auto 1rem;
-            }
-
-            /* texty */
-            .bublina h3 {
-                font-size: 1.15rem;
-                color: #111827;
-                font-weight: 700;
-                margin-bottom: .6rem;
-            }
-
-            .bublina p {
-                color: #374151;
-                line-height: 1.5;
-                font-size: .95rem;
-                margin-bottom: 1.2rem;
-            }
-
-            /* tlačítko */
-            .bublina a {
-                display: inline-block;
-                background: #0d9ef0;
-                color: #fff;
-                text-decoration: none;
-                padding: .55rem 1.2rem;
-                border-radius: .7rem;
-                font-weight: 600;
-                transition: background .2s;
-            }
-
-                .bublina a:hover {
-                    background: #007ed1;
-                }
-
-        /* úprava pro telefony */
-        @media (max-width: 480px) {
-            .bublina {
-                padding: 1.2rem 1rem 1.8rem;
-            }
-
-                .bublina img {
-                    width: 80px;
-                    height: 80px;
-                }
-
-                .bublina p {
-                    font-size: .9rem;
-                }
-
-                .bublina a {
-                    font-size: .9rem;
-                    padding: .45rem 1rem;
-                }
-        }
 
     </style>
 </head>
@@ -229,12 +125,35 @@
 
     <!-- PATIČKA -->
     <footer class="paticka">
-        <p>&copy; <span id="rok"></span> Moje klinika</p>
-        <nav class="paticka-odkazy">
-            <a href="#">Zásady ochrany osobních údajů</a>
-            <a href="#">Mapa stránek</a>
-            <a href="#">Nahoru</a>
-        </nav>
+        <div class="container grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem">
+            <div>
+                <p>&copy; <span id="rok"></span> Moje klinika</p>
+                <p class="muted">Moderní ambulantní péče v centru Prahy.</p>
+            </div>
+            <div>
+                <p style="font-weight:600">Kontakty</p>
+                <ul class="list-reset muted">
+                    <li>+420 222 111 222</li>
+                    <li>info@mojeklinika.cz</li>
+                    <li>U Zdraví 12, Praha 1</li>
+                </ul>
+            </div>
+            <div>
+                <p style="font-weight:600">Rychlé odkazy</p>
+                <ul class="list-reset">
+                    <!--            dod2lat                   -->
+                    <li><a href="./sluzby.html">Služby</a></li>
+                    <li><a href="./objednat.html">Rezervace</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">Ochrana osobních údajů</a></li>
+                </ul>
+            </div>
+            <div>
+                <p style="font-weight:600">Otevírací doba recepce</p>
+                <p class="muted">Po–Pá 7:30–17:30</p>
+                <p class="muted" style="font-size:.85rem;margin-top:1rem">© <span id="year"></span> MojeKlinika. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
     </footer>
 
     <!-- jednoduchý skript pro menu a rok -->
