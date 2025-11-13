@@ -29,7 +29,7 @@
                 <!--          DODĚLAT HREF!!!!!!!                   -->
                 <li><a href="./index.html">Domů</a></li>
                 <li><a href="./sluzby.html">Služby</a></li>
-                <li><a href="./tym.html">Náš tým</a></li>
+                <li><a href="./tym.html">Tým</a></li>
                 <li><a href="#">Ceník</a></li>
                 <li><a href="#">Kontakt</a></li>
             </ul>
@@ -59,73 +59,86 @@
         <nav class="breadcrumbs">
             <a href="./index.html">Domů</a>
             <span>/</span>
-            <span>Služby</span>
+            <a href="./tym.html">Náš tým</a>
+            <span>/</span>
+            <span>MUDr. Lucie Králová</span>
         </nav>
 
-        <!-- Služby -->
-        <section class="bubliny-sluzby">
-            <h2>Naše služby</h2>
-            <p>Poskytujeme komplexní péči v různých medicínských oborech. Každý z našich specialistů se zaměřuje na pečlivou diagnostiku, prevenci a osobní přístup k pacientovi.</p>
+        <section class="doctor-detail">
 
-            <div class="bubliny-grid">
-
-                <div class="bublina">
-                    <img src="./prakticky-lekar.jpg" alt="Praktický lékař">
-                    <h3>Praktický lékař</h3>
-                    <p>Preventivní prohlídky, očkování, předpis léků, konzultace a dlouhodobé sledování zdravotního stavu pacienta.</p>
-                    <a class="sluzba karta" href="./sluzby-1.html">Více</a>
+            <!-- HLAVNÍ HLAVIČKA LÉKAŘE -->
+            <div class="doctor-header">
+                <div class="doctor-photo-lg">
+                    <img src="./lekar1.png" alt="MUDr. Lucie Králová – praktická lékařka">
                 </div>
 
-                <div class="bublina">
-                    <img src="./interna.jpg" alt="Interní lékařství">
-                    <h3>Interní lékařství</h3>
-                    <p>Diagnostika a sledování chronických onemocnění srdce, cév, plic, jater a ledvin. Komplexní interní péče.</p>
-                    <a class="sluzba karta" href="./sluzby-1.html">Více</a>
-                </div>
+                <div class="doctor-info">
+                    <h1>MUDr. Lucie Králová</h1>
+                    <p class="doctor-specialization">Praktická lékařka pro dospělé</p>
 
-                <div class="bublina">
-                    <img src="./ockovani.jpg" alt="Očkování">
-                    <h3>Očkování</h3>
-                    <p>Pravidelná, cestovní i nepovinná očkování. Individuální očkovací plán pro děti i dospělé, včetně přeočkování.</p>
-                    <a class="sluzba karta" href="./sluzby-1.html">Více</a>
-                </div>
+                    <ul class="doctor-meta">
+                        <li><strong>Pracoviště:</strong> Moje klinika, U Zdraví 12, Praha 1</li>
+                        <li><strong>Obor:</strong> všeobecné praktické lékařství</li>
+                        <li><strong>Přijímá nové pacienty:</strong> ano</li>
+                        <li><strong>Jazyky:</strong> čeština, angličtina</li>
+                    </ul>
 
-                <div class="bublina">
-                    <img src="./nefrologie.jpg" alt="Nefrologie">
-                    <h3>Nefrologie</h3>
-                    <p>Diagnostika, léčba a prevence onemocnění ledvin. Vyšetření funkce ledvin, krevní tlak a laboratorní testy.</p>
-                    <a class="sluzba karta" href="./sluzby-1.html">Více</a>
+                    <div class="doctor-cta-row">
+                        <a href="./objednat.html" class="tlacitko">Objednat se k lékařce</a>
+                        <a href="./tym.html" class="link-secondary">Zpět na přehled lékařů</a>
+                    </div>
                 </div>
+            </div>
 
-                <div class="bublina">
-                    <img src="./orl.jpg" alt="ORL">
-                    <h3>ORL</h3>
-                    <p>Kompletní vyšetření uší, nosu a krku. Analýza obtíží, cílené fyzikální vyšetření a léčba akutních i chronických potíží.</p>
-                    <a class="sluzba karta" href="./sluzby-1.html">Více</a>
-                </div>
+            <!-- DALŠÍ INFORMACE V BLOCÍCH -->
+            <div class="doctor-sections">
 
-                <div class="bublina">
-                    <img src="./gynekologie.jpg" alt="Gynekologie">
-                    <h3>Gynekologie</h3>
-                    <p>Pravidelné preventivní prohlídky, ultrazvuková vyšetření, cytologie a kolposkopie. Péče o ženy všech věkových skupin.</p>
-                    <a class="sluzba karta" href="./sluzby-1.html">Více</a>
-                </div>
+                <section class="doctor-box">
+                    <h2>Ordinační hodiny</h2>
+                    <ul>
+                        <li><strong>Pondělí:</strong> 8:00–14:00</li>
+                        <li><strong>Úterý:</strong> 12:00–18:00</li>
+                        <li><strong>Středa:</strong> 8:00–14:00</li>
+                        <li><strong>Čtvrtek:</strong> 8:00–13:00</li>
+                        <li><strong>Pátek:</strong> 8:00–12:00</li>
+                    </ul>
+                    <p class="note">Ordinační hodiny se mohou měnit, prosím vždy využij online objednání.</p>
+                </section>
 
-                <div class="bublina">
-                    <img src="./kardiologie.jpg" alt="Kardiologie">
-                    <h3>Kardiologie</h3>
-                    <p>Vyšetření srdce, EKG, ultrazvuk, kontrola tlaku a prevence kardiovaskulárních onemocnění.</p>
-                    <a class="sluzba karta" href="./sluzby-1.html">Více</a>
-                </div>
+                <section class="doctor-box">
+                    <h2>O lékařce</h2>
+                    <p>
+                        MUDr. Lucie Králová se věnuje komplexní péči o dospělé pacienty.
+                        Klade důraz na prevenci, včasný záchyt onemocnění a srozumitelnou komunikaci.
+                    </p>
+                    <p>
+                        V ambulanci zajišťuje preventivní prohlídky, očkování, vedení pacientů
+                        s chronickými onemocněními i konzultace nálezů od specialistů.
+                    </p>
+                </section>
 
-                <div class="bublina">
-                    <img src="./dermatologie.jpg" alt="Dermatologie">
-                    <h3>Dermatologie</h3>
-                    <p>Vyšetření a léčba kožních potíží, alergických reakcí, ekzémů a znamének. Nabízíme i estetické ošetření pokožky.</p>
-                    <a class="sluzba karta" href="./sluzby-1.html">Více</a>
-                </div>
+                <section class="doctor-box">
+                    <h2>Vzdělání a praxe</h2>
+                    <ul>
+                        <li>1. lékařská fakulta UK v Praze – všeobecné lékařství</li>
+                        <li>Atestace z všeobecného praktického lékařství</li>
+                        <li>Praxe v interních a praktických ambulancích v Praze</li>
+                        <li>Pravidelná účast na odborných konferencích a kurzech</li>
+                    </ul>
+                </section>
+
+                <section class="doctor-box">
+                    <h2>Čemu se věnuje</h2>
+                    <ul>
+                        <li>preventivní prohlídky a očkování</li>
+                        <li>dlouhodobé sledování chronických onemocnění</li>
+                        <li>konzultace laboratorních a zobrazovacích vyšetření</li>
+                        <li>vystavování potvrzení pro zaměstnavatele a školy</li>
+                    </ul>
+                </section>
 
             </div>
+
         </section>
 
     </main>
