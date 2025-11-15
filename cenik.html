@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moje klinika – Domů</title>
+    <link rel="icon" href="./logo.png" type="image/png">
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body>
+
+    <!-- HLAVIČKA -->
+    <header class="hlavicka">
+        <div class="logo-box">
+            <a href="./index.html">
+                <img src="./logo.png" alt="Logo kliniky" width="592">
+            </a>
+        </div>
+
+        <!-- tlačítko menu (hamburger) -->
+        <button id="tlacitkoMenu" class="hamburger">
+            <span></span><span></span><span></span>
+        </button>
+
+        <!-- navigace -->
+        <nav id="navigace" class="menu" hidden>
+            <ul>
+                <!--          DODĚLAT HREF!!!!!!!                   -->
+                <li><a href="./index.html">Domů</a></li>
+                <li><a href="./sluzby.html">Služby</a></li>
+                <li><a href="./tym.html">Náš tým</a></li>
+                <li><a href="./cenik.html">Ceník</a></li>
+                <li><a href="./kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- kontakt + jazyk -->
+    <section class="kontaktni-pruh">
+        <div class="telefon">
+            <svg viewBox="0 0 24 24" class="ikona"><path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2a1.3 1.3 0 011.4-.3 10.4 10.4 0 003.2.5 1.3 1.3 0 011.3 1.3v3.8a1.3 1.3 0 01-1.3 1.3A19.6 19.6 0 012 4.3 1.3 1.3 0 013.3 3h3.8A1.3 1.3 0 018.4 4.3c0 1.1.2 2.2.5 3.2.2.5 0 1.1-.3 1.4L6.6 10.8z" /></svg>
+            <a href="tel:+420111222111" class="cislo">+420 111 222 111</a>
+        </div>
+
+        <div class="jazyk">
+            <a href="#">CZ</a> / <a href="#">EN</a>
+        </div>
+    </section>
+
+    <!-- hlavní tlačítko -->
+    <div class="objednat">
+        <a class="tlacitko" href="./objednat.html">Objednat se</a>
+    </div>
+
+    <!-- HLAVNÍ OBSAH -->
+    <main class="obal">
+
+        <section id="cenik-uvod" style="padding: 6px 0 20px">
+            <h1>Ceník</h1>
+
+            <p>
+                Nabízím ti <strong>komplexní lékařskou a odbornou péči</strong> v rámci našich služeb a jednotlivých vyšetření.
+                V případě zájmu můžeš využít také péči našeho
+                <a href="./sluzby-1.html">Praktického lékaře</a> nebo odborných ambulancí.
+            </p>
+
+            <p>
+                Pokud nejsi naším registrovaným pacientem nebo nechceš využít roční programy péče,
+                můžeš naše služby čerpat <strong>jednorázově jako samoplátkyně</strong>.
+                Právě pro tebe je určen následující přehled orientačních cen.
+            </p>
+
+            <ul style="margin: 1rem 0; line-height: 1.7;">
+                <li>Kompletní ceník je k dispozici na naší recepci. Uvedené ceny jsou orientační.</li>
+                <li>Konečná cena se může lišit podle rozsahu vyšetření nebo terapie.</li>
+                <li><strong>Akceptujeme hotovost i platební karty.</strong></li>
+                <li>Přijímáme také platby Edenred a Benefity PLUS.</li>
+                <li>Platba probíhá přímo na recepci po vyšetření.</li>
+                <li>Nabízíme dárkové poukazy – můžeš věnovat jednorázové vyšetření i celkovou péči.</li>
+                <li>Rezervační poplatek 1 500 Kč pro nové klienty (více informací zde)</li>
+            </ul>
+        </section>
+
+
+        <section id="cenik" style="padding: 12px 0">
+            <h2>Ceník služeb</h2>
+
+            <!-- Praktický lékař -->
+            <details class="karta cenik-blok">
+                <summary>
+                    <span class="nazev">Praktický lékař</span>
+                    <span class="sipka">▼</span>
+                </summary>
+
+                <div class="cenik-radek">
+                    <span>Vstupní vyšetření</span><span class="cena">900,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Preventivní prohlídka</span><span class="cena">0,-*</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Konzultace nad rámec pojištění</span><span class="cena">600,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Potvrzení pro zaměstnavatele</span><span class="cena">400,-</span>
+                </div>
+            </details>
+
+            <!-- Interní lékařství -->
+            <details class="karta cenik-blok">
+                <summary>
+                    <span class="nazev">Interní lékařství</span>
+                    <span class="sipka">▼</span>
+                </summary>
+
+                <div class="cenik-radek">
+                    <span>Komplexní interní vyšetření</span><span class="cena">1 200,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Kontrolní vyšetření</span><span class="cena">900,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>EKG</span><span class="cena">350,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Laboratorní testy</span><span class="cena">od 200,-</span>
+                </div>
+            </details>
+
+            <!-- Očkování -->
+            <details class="karta cenik-blok">
+                <summary>
+                    <span class="nazev">Očkování</span>
+                    <span class="sipka">▼</span>
+                </summary>
+
+                <div class="cenik-radek">
+                    <span>Aplikace očkovací látky</span><span class="cena">250,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Chřipka</span><span class="cena">450,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Klíšťová encefalitida</span><span class="cena">950,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Hepatitida A/B</span><span class="cena">1 100,-</span>
+                </div>
+            </details>
+
+            <!-- Nefrologie -->
+            <details class="karta cenik-blok">
+                <summary>
+                    <span class="nazev">Nefrologie</span>
+                    <span class="sipka">▼</span>
+                </summary>
+
+                <div class="cenik-radek">
+                    <span>Komplexní nefrologické vyšetření</span><span class="cena">1 200,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Ultrazvuk ledvin</span><span class="cena">700,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Kontrola</span><span class="cena">850,-</span>
+                </div>
+            </details>
+
+            <!-- ORL -->
+            <details class="karta cenik-blok">
+                <summary>
+                    <span class="nazev">ORL</span>
+                    <span class="sipka">▼</span>
+                </summary>
+
+                <div class="cenik-radek">
+                    <span>ORL vyšetření</span><span class="cena">900,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Audiometrie</span><span class="cena">500,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Endoskopie</span><span class="cena">700,-</span>
+                </div>
+            </details>
+
+            <!-- Gynekologie -->
+            <details class="karta cenik-blok">
+                <summary>
+                    <span class="nazev">Gynekologie</span>
+                    <span class="sipka">▼</span>
+                </summary>
+
+                <div class="cenik-radek">
+                    <span>Preventivní gynekologická prohlídka</span><span class="cena">800,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Cytologie</span><span class="cena">350,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Ultrazvuk</span><span class="cena">600,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Akutní vyšetření</span><span class="cena">1 000,-</span>
+                </div>
+            </details>
+
+            <!-- Kardiologie -->
+            <details class="karta cenik-blok">
+                <summary>
+                    <span class="nazev">Kardiologie</span>
+                    <span class="sipka">▼</span>
+                </summary>
+
+                <div class="cenik-radek">
+                    <span>Kardiologické vyšetření</span><span class="cena">1 300,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Echokardiografie</span><span class="cena">1 400,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>EKG</span><span class="cena">350,-</span>
+                </div>
+            </details>
+
+            <!-- Dermatologie -->
+            <details class="karta cenik-blok">
+                <summary>
+                    <span class="nazev">Dermatologie</span>
+                    <span class="sipka">▼</span>
+                </summary>
+
+                <div class="cenik-radek">
+                    <span>Dermatologické vyšetření</span><span class="cena">1 900,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Kontrolní vyšetření</span><span class="cena">1 200,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Dermatoskopie znamének</span><span class="cena">1 500,-</span>
+                </div>
+
+                <div class="cenik-radek">
+                    <span>Odstranění kožního útvaru</span><span class="cena">od 1 500,-</span>
+                </div>
+            </details>
+        </section>
+
+
+    </main>
+
+        <!-- PATIČKA -->
+        <footer class="paticka">
+            <div class="container grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem">
+                <div>
+                    <p>&copy; <span id="rok"></span> Moje klinika</p>
+                    <p class="muted">Moderní ambulantní péče v centru Prahy.</p>
+                </div>
+                <div>
+                    <p style="font-weight:600">Kontakty</p>
+                    <ul class="list-reset muted">
+                        <li>+420 222 111 222</li>
+                        <li>info@mojeklinika.cz</li>
+                        <li>U Zdraví 12, Praha 1</li>
+                    </ul>
+                </div>
+                <div>
+                    <p style="font-weight:600">Rychlé odkazy</p>
+                    <ul class="list-reset">
+                        <!--            dod2lat                   -->
+                        <li><a href="./sluzby.html">Služby</a></li>
+                        <li><a href="./objednat.html">Rezervace</a></li>
+                        <li><a href="./kontakt.html">Kontakt</a></li>
+                        <li><a href="#">Ochrana osobních údajů</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p style="font-weight:600">Otevírací doba recepce</p>
+                    <p class="muted">Po–Pá 7:30–17:30</p>
+                    <p class="muted" style="font-size:.85rem;margin-top:1rem">© <span id="year"></span> MojeKlinika. Všechna práva vyhrazena.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- jednoduchý skript pro menu a rok -->
+        <script>
+            const tlacitko = document.getElementById('tlacitkoMenu');
+            const nav = document.getElementById('navigace');
+
+            tlacitko.addEventListener('click', () => {
+                const otevrene = tlacitko.getAttribute('data-open') === '1';
+                tlacitko.setAttribute('data-open', otevrene ? '0' : '1');
+                if (otevrene) nav.setAttribute('hidden', '');
+                else nav.removeAttribute('hidden');
+            });
+
+            document.getElementById('rok').textContent = new Date().getFullYear();
+        </script>
+
+</body>
+</html>
