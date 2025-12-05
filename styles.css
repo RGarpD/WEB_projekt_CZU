@@ -151,13 +151,13 @@ a:hover { text-decoration: underline; }
 
 /* hlavní obsah */
 .obal {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0 10px;
+    max-width: var(--max) !important;
+    margin: 0 auto !important;
+    padding: 0 10px !important;
 }
 
 /* sekce o klinice */
-.o-klinice {
+    .o-klinice {
     padding: 10px 0;
 }
 
@@ -196,19 +196,53 @@ a:hover { text-decoration: underline; }
 }
 
 /* služby */
-.sluzby {
-    padding: 16px 0;
-    border-top: 1px solid var(--barva-hrana);
+.sluzba.karta {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .2s, box-shadow .2s;
 }
+
+.sluzba.karta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 .sluzby-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
-.sluzba h3 {
-    margin: 4px 0;
+
+/* služby vice */
+.sluzby-vice {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
-.velka { grid-column: span 1; }
+
+.btn-dolu {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    background: #0d9ef0;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: .6rem 1.2rem;
+    transition: background .2s, transform .2s;
+}
+
+    .btn-dolu:hover {
+        background: #007ed1;
+        transform: translateY(-2px);
+    }
+
+    .btn-dolu span {
+        font-size: 1.2em;
+        line-height: 1;
+    }
 
 /* otevírací doba */
 .oteviraci-doba {
@@ -292,3 +326,820 @@ a:hover { text-decoration: underline; }
     }
     .velka { grid-column: span 2; }
 }
+
+.velka {
+    grid-column: span 2;
+}
+
+/* objednat */
+.grid-form {
+    display: grid;
+    gap: .75rem
+}
+
+.grid-two {
+    display: grid;
+    gap: .75rem
+}
+
+@media(min-width:640px) {
+    .grid-two {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+.card {
+    background: var(--barva-box);
+    border: 1px solid var(--barva-hrana);
+    border-radius: var(--radius);
+    padding: 1rem
+}
+
+.muted {
+    color: var(--barva-seda)
+}
+
+.btn {
+    display: inline-block;
+    padding: .65rem 1rem;
+    border-radius: 999px;
+    background: var(--barva-modra);
+    color: #fff;
+    border: 0
+}
+
+.btn:hover {
+    background: var(--barva-modra-tmava)
+}
+
+.field {
+    width: 100%;
+    padding: .7rem .9rem;
+    border: 1px solid var(--barva-hrana);
+    border-radius: .65rem;
+    background: #fff
+}
+
+.aspect-43 {
+    position: relative;
+    padding-top: 56%
+}
+
+.aspect-43 > .ph {
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    background: linear-gradient(135deg,#e0f2fe,#f8fafc)
+}
+
+.steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: .5rem
+}
+
+.steps li {
+    background: #fff;
+    border: 1px solid var(--barva-hrana);
+    border-radius: .65rem;
+    padding: .6rem .8rem
+}
+
+.mapa-box {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+    .mapa-box iframe {
+        border: 0;
+        width: 100%;
+        height: 340px;
+        display: block;
+        margin: 0 auto;
+    }
+
+@media (min-width: 768px) {
+    .mapa-box iframe {
+        height: 320px;
+        max-width: 640px;
+    }
+}
+
+aside.card {
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 900px) {
+    aside.card {
+        margin-top: 3rem;
+    }
+}
+
+
+.container {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.grid {
+    display: grid;
+    gap: 16px;
+}
+
+.grid-2 {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+    .grid-2 {
+        grid-template-columns: 1.2fr 1fr;
+    }
+}
+
+.title,
+.subtitle {
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#faq > h2 {
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.rezervace-uvod {
+    text-align: center;
+    margin: 2rem auto 1rem;
+}
+
+.rezervace-uvod h1 {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    font-weight: 700;
+    color: var(--text);
+}
+
+.steps {
+    list-style: decimal inside;
+    padding-left: 1rem;
+}
+
+.steps li {
+    background: #fff;
+    border: 1px solid var(--barva-hrana, #e5e7eb);
+    border-radius: .65rem;
+    padding: .6rem .8rem;
+    margin-bottom: .5rem;
+}
+
+/* sluzby */
+
+.hero-service {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    /*margin: 2rem auto;*/
+    margin: 0 auto;
+    max-width: var(--max);
+    padding: 0 1rem;
+}
+
+@media(min-width:900px) {
+    .hero-service {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+.hero-service img {
+    width: 100%;
+    border-radius: 1rem;
+    object-fit: cover
+}
+
+.service-content h1 {
+    color: #10b4c7;
+    font-size: clamp(1.8rem,3vw,2.4rem);
+    margin-bottom: 1rem;
+}
+
+.service-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #0d9ef0;
+    color: #fff;
+    padding: .75rem 1.25rem;
+    border-radius: .5rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+    .btn-primary:hover {
+        background: #007ed1
+    }
+
+
+.service-columns {
+    display: grid;
+    gap: 2rem;
+    max-width: var(--max);
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+@media(min-width:900px) {
+    .service-columns {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+.service-columns h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem
+}
+
+.service-columns ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.service-columns li {
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+    margin-bottom: .5rem;
+    color: #4b5563
+}
+
+.service-columns li::before {
+    content: '+';
+    color: #7ac143;
+    font-weight: bold
+}
+
+.service-columns strong {
+    color: #111
+}
+
+
+.doctors {
+    text-align: center;
+    /*margin: 3rem auto;*/
+    margin: 0 auto;
+    max-width: var(--max);
+    padding: 0 1rem;
+}
+
+.doctors h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.doctors-grid {
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+}
+
+@media(min-width:900px) {
+    .doctors-grid {
+        grid-template-columns: repeat(4,1fr)
+    }
+}
+
+.doctor-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,.05);
+}
+
+.doctor-card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem
+}
+
+.doctor-card h3 {
+    margin: .5rem 0 .25rem;
+    font-size: 1.1rem;
+    color: #111
+}
+
+.doctor-card p {
+    margin: 0;
+    color: #4b5563;
+    font-size: .9rem
+}
+
+.doctor-card a {
+    display: inline-block;
+    margin-top: .75rem;
+    color: #007ed1;
+    font-weight: 500;
+    text-decoration: none
+}
+
+.doctor-card a:hover {
+    text-decoration: underline
+}
+
+/* služby */
+    /* Bubliny – tři v řadě */
+    .bubliny-sluzby {
+    text-align: center;
+    padding: 3rem 1rem;
+    max-width: var(--max);
+    margin: 0 auto
+}
+
+    .bubliny-sluzby h2 {
+        font-size: 2rem;
+        color: #0d9ef0;
+        margin-bottom: .5rem;
+    }
+
+    .bubliny-sluzby p {
+        color: #4b5563;
+        margin-bottom: 2rem;
+        font-size: 1.05rem;
+    }
+
+.bubliny-grid {
+    display: grid;
+    gap: 1.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* karta služby */
+    .bublina {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.2rem;
+    padding: 1.8rem 1.2rem 2.2rem;
+    text-align: center;
+    transition: transform .25s, box-shadow .25s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    .bublina:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    /* obrázek nahoře */
+    .bublina img {
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 0 auto 1rem;
+    }
+
+    /* texty */
+    .bublina h3 {
+        font-size: 1.15rem;
+        color: #111827;
+        font-weight: 700;
+        margin-bottom: .6rem;
+    }
+
+    .bublina p {
+        color: #374151;
+        line-height: 1.5;
+        font-size: .95rem;
+        margin-bottom: 1.2rem;
+    }
+
+    /* tlačítko */
+    .bublina a {
+        display: inline-block;
+        background: #0d9ef0;
+        color: #fff;
+        text-decoration: none;
+        padding: .55rem 1.2rem;
+        border-radius: .7rem;
+        font-weight: 600;
+        transition: background .2s;
+    }
+
+        .bublina a:hover {
+            background: #007ed1;
+        }
+
+/* úprava pro telefony */
+@media (max-width: 480px) {
+    .bublina {
+        padding: 1.2rem 1rem 1.8rem;
+    }
+
+        .bublina img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .bublina p {
+            font-size: .9rem;
+        }
+
+        .bublina a {
+            font-size: .9rem;
+            padding: .45rem 1rem;
+        }
+}
+
+/* proč my sekce --> */
+
+.service-columns {
+    display: grid;
+    gap: 2rem;
+    max-width: var(--max);
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+@media(min-width:900px) {
+    .service-columns {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+.service-columns h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem
+}
+
+.service-columns ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.service-columns li {
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+    margin-bottom: .5rem;
+    color: #374151
+}
+
+.service-columns li::before {
+    content: '+';
+    color: #7ac143;
+    font-weight: bold
+}
+
+.service-columns strong {
+    color: #111
+}
+
+
+.membership-section {
+    max-width: var(--max);
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    color: #111;
+    padding: 3rem 1rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--barva-hrana);
+    border-bottom: 1px solid var(--barva-hrana);
+}
+
+.membership-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+    .membership-section p {
+        max-width: 800px;
+        margin: 0 auto 2rem auto;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+.membership-columns {
+    display: grid;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media(min-width:900px) {
+    .membership-columns {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+.membership-columns ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.membership-columns li {
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+    margin-bottom: .75rem;
+}
+
+.membership-columns li::before {
+    content: '+';
+    color: #b4e77f;
+    font-weight: bold;
+}
+
+/* doktor */
+
+.breadcrumbs {
+    max-width: var(--max);
+    margin: 1.5rem auto 0.5rem;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+    .breadcrumbs a {
+        color: #007ed1;
+        text-decoration: none;
+    }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+/* detail lékaře */
+
+.doctor-detail {
+    max-width: var(--max);
+    margin: 0 auto 3rem;
+    padding: 1rem;
+}
+
+.doctor-header {
+    display: grid;
+    grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    background: #ffffff;
+    border-radius: 1.25rem;
+    padding: 1.75rem;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+}
+
+.doctor-photo-lg img {
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 1 / 1;
+    border-radius: 999px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.doctor-info h1 {
+    font-size: 1.9rem;
+    margin: 0 0 0.25rem;
+}
+
+.doctor-specialization {
+    margin: 0 0 1rem;
+    color: #007ed1;
+    font-weight: 600;
+}
+
+.doctor-meta {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+    .doctor-meta li + li {
+        margin-top: 0.25rem;
+    }
+
+.doctor-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    align-items: center;
+}
+
+.link-secondary {
+    font-size: 0.9rem;
+    color: #4b5563;
+    text-decoration: none;
+}
+
+    .link-secondary:hover {
+        text-decoration: underline;
+    }
+
+/* spodní boxy */
+
+.doctor-sections {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.doctor-box {
+    background: #ffffff;
+    border-radius: 1.25rem;
+    padding: 1.5rem 1.75rem;
+    box-shadow: 0 1px 6px rgba(15, 23, 42, 0.04);
+}
+
+    .doctor-box h2 {
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+    }
+
+    .doctor-box ul {
+        margin: 0.25rem 0 0;
+        padding-left: 1.2rem;
+    }
+
+    .doctor-box .note {
+        margin-top: 0.75rem;
+        font-size: 0.85rem;
+        color: #6b7280;
+    }
+
+@media (min-width: 900px) {
+    .doctor-sections {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .doctor-header {
+        grid-template-columns: minmax(0, 1fr);
+        text-align: center;
+    }
+
+    .doctor-info h1 {
+        font-size: 1.6rem;
+    }
+
+    .doctor-cta-row {
+        justify-content: center;
+    }
+}
+
+/* Ceník – řádky v detailech */
+.cenik-radek {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--barva-hrana);
+    padding: .6rem .2rem;
+    font-size: .95rem;
+}
+
+.cena {
+    color: #f97316;
+    font-weight: 600;
+}
+
+/* --- Rozestupy mezi bloky ceníku --- */
+.cenik-blok {
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+    /* --- Vzhled summary --- */
+    .cenik-blok summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        list-style: none;
+        padding: .9rem 1rem;
+        font-weight: 600;
+    }
+
+        /* odstranění systémové šipky */
+        .cenik-blok summary::-webkit-details-marker {
+            display: none;
+        }
+
+    /* šipka vpravo */
+    .cenik-blok .sipka {
+        font-size: 1.1rem;
+        color: #f97316;
+        transition: transform .25s ease;
+    }
+
+    /* otočení při otevření */
+    .cenik-blok[open] .sipka {
+        transform: rotate(180deg);
+    }
+
+/* řádky ceníku */
+.cenik-radek {
+    display: flex;
+    justify-content: space-between;
+    padding: .7rem 1rem;
+    border-top: 1px solid var(--barva-hrana);
+    font-size: .95rem;
+}
+
+.cena {
+    font-weight: 600;
+    color: #f97316;
+}
+
+/* Kontakty */
+
+.kontakt-bublina {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    height: 100%;
+}
+
+.kontakt-box {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    background: var(--barva-svetla);
+    padding: .6rem .8rem;
+    border-radius: .5rem;
+}
+
+.email-card {
+    padding: 1.2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+    .email-card a {
+        color: #0d9ef0;
+    }
+
+.mapa-box iframe {
+    width: 100%;
+    height: 340px;
+    border: 0;
+    border-radius: .5rem;
+}
+
+/* Default – na mobilech 1 sloupec */
+.emaily-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Na desktopu (900px+) – 2 sloupce */
+@media (min-width: 900px) {
+    .emaily-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Uprav emailové boxy */
+.email-card {
+    padding: 1.2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+
+/* Firemní údaje – zarovnání doprostřed */
+.firemni-box {
+    text-align: center;
+    padding: 2rem;
+    line-height: 1.8;
+}
+

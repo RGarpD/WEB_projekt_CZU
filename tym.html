@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moje klinika – Domů</title>
+    <link rel="icon" href="./logo.png" type="image/png">
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body>
+
+    <!-- HLAVIČKA -->
+    <header class="hlavicka">
+        <div class="logo-box">
+            <a href="./index.html">
+                <img src="./logo.png" alt="Logo kliniky" width="592">
+            </a>
+        </div>
+
+        <!-- tlačítko menu (hamburger) -->
+        <button id="tlacitkoMenu" class="hamburger">
+            <span></span><span></span><span></span>
+        </button>
+
+        <!-- navigace -->
+        <nav id="navigace" class="menu" hidden>
+            <ul>
+                <!--          DODĚLAT HREF!!!!!!!                   -->
+                <li><a href="./index.html">Domů</a></li>
+                <li><a href="./sluzby.html">Služby</a></li>
+                <li><a href="./tym.html">Náš tým</a></li>
+                <li><a href="./cenik.html">Ceník</a></li>
+                <li><a href="./kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- kontakt + jazyk -->
+    <section class="kontaktni-pruh">
+        <div class="telefon">
+            <svg viewBox="0 0 24 24" class="ikona"><path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2a1.3 1.3 0 011.4-.3 10.4 10.4 0 003.2.5 1.3 1.3 0 011.3 1.3v3.8a1.3 1.3 0 01-1.3 1.3A19.6 19.6 0 012 4.3 1.3 1.3 0 013.3 3h3.8A1.3 1.3 0 018.4 4.3c0 1.1.2 2.2.5 3.2.2.5 0 1.1-.3 1.4L6.6 10.8z" /></svg>
+            <a href="tel:+420111222111" class="cislo">+420 111 222 111</a>
+        </div>
+
+        <div class="jazyk">
+            <a href="#">CZ</a> / <a href="#">EN</a>
+        </div>
+    </section>
+
+    <!-- hlavní tlačítko -->
+    <div class="objednat">
+        <a class="tlacitko" href="./objednat.html">Objednat se</a>
+    </div>
+
+    <!-- HLAVNÍ OBSAH -->
+    <main class="obal">
+
+        <nav class="breadcrumbs">
+            <a href="./index.html">Domů</a>
+            <span>/</span>
+            <span>Náš tým</span>
+        </nav>
+
+        <h2>Náš tým</h2>
+        <p>O pacienty se stará sehraný tým zkušených lékařů z různých oborů. Společně řešíme prevenci, diagnostiku i dlouhodobou péči tak, aby pro tebe bylo vše co nejjednodušší a srozumitelné.</p>
+
+        <!-- lékaři -->
+        <section class="doctors" id="lekari">
+            <h2>Naši lékaři</h2>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <img src="./lekar1.png" alt="MUDr. Ondřej Masner">
+                    <h3>MUDr. Ondřej Masner</h3>
+                    <p>Praktický lékař<br>Hlavní lékař psychosomatické medicíny</p>
+                    <a href="./doktor.html">Více informací →</a>
+                </div>
+                <div class="doctor-card">
+                    <img src="./lekar2.png" alt="MUDr. Peter Riško Ph.D.">
+                    <h3>MUDr. Peter Riško Ph.D.</h3>
+                    <p>Praktický lékař<br>Diabetolog, endokrinolog, internista</p>
+                    <a href="./doktor.html">Více informací →</a>
+                </div>
+                <div class="doctor-card">
+                    <img src="./lekar3.png" alt="MUDr. Lucie Moravcová">
+                    <h3>MUDr. Lucie Moravcová</h3>
+                    <p>Praktická lékařka</p>
+                    <a href="./doktor.html">Více informací →</a>
+                </div>
+                <div class="doctor-card">
+                    <img src="./lekar4.png" alt="MUDr. Erik Kolář">
+                    <h3>MUDr. Erik Kolář</h3>
+                    <p>Praktický lékař<br>Internista</p>
+                    <a href="./doktor.html">Více informací →</a>
+                </div>
+                <article class="doctor-card">
+                    <img src="./lekar4.png" alt="MUDr. Petr Veselý – internista">
+                    <h3>MUDr. Petr Veselý</h3>
+                    <p>Internista se zaměřením na chronická onemocnění a komplexní interní diagnostiku.</p>
+                    <a href="./doktor.html">Více informací →</a>
+                </article>
+                <article class="doctor-card">
+                    <img src="./lekar1.png" alt="MUDr. Lucie Králová – praktická lékařka">
+                    <h3>MUDr. Lucie Králová</h3>
+                    <p>Praktická lékařka pro dospělé, preventivní prohlídky a dlouhodobé sledování zdravotního stavu.</p>
+                    <a href="./doktor.html">Více informací →</a>
+                </article>
+                <article class="doctor-card">
+                    <img src="./lekar2.png" alt="MUDr. Tomáš Dvořák – kardiolog">
+                    <h3>MUDr. Tomáš Dvořák</h3>
+                    <p>Kardiolog se zkušenostmi z klinické i ambulantní praxe, EKG a echokardiografie.</p>
+                    <a href="./doktor.html">Více informací →</a>
+                </article>
+                <article class="doctor-card">
+                    <img src="./lekar3.png" alt="MUDr. Eva Pokorná – dermatoložka">
+                    <h3>MUDr. Eva Pokorná</h3>
+                    <p>Dermatoložka, která se věnuje jak běžným kožním potížím, tak preventivním kontrolám znamének.</p>
+                    <a href="./doktor.html">Více informací →</a>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+        <!-- PATIČKA -->
+        <footer class="paticka">
+            <div class="container grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem">
+                <div>
+                    <p>&copy; <span id="rok"></span> Moje klinika</p>
+                    <p class="muted">Moderní ambulantní péče v centru Prahy.</p>
+                </div>
+                <div>
+                    <p style="font-weight:600">Kontakty</p>
+                    <ul class="list-reset muted">
+                        <li>+420 222 111 222</li>
+                        <li>info@mojeklinika.cz</li>
+                        <li>U Zdraví 12, Praha 1</li>
+                    </ul>
+                </div>
+                <div>
+                    <p style="font-weight:600">Rychlé odkazy</p>
+                    <ul class="list-reset">
+                        <!--            dod2lat                   -->
+                        <li><a href="./sluzby.html">Služby</a></li>
+                        <li><a href="./objednat.html">Rezervace</a></li>
+                        <li><a href="./kontakt.html">Kontakt</a></li>
+                        <li><a href="#">Ochrana osobních údajů</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p style="font-weight:600">Otevírací doba recepce</p>
+                    <p class="muted">Po–Pá 7:30–17:30</p>
+                    <p class="muted" style="font-size:.85rem;margin-top:1rem">© <span id="year"></span> MojeKlinika. Všechna práva vyhrazena.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- jednoduchý skript pro menu a rok -->
+        <script>
+            const tlacitko = document.getElementById('tlacitkoMenu');
+            const nav = document.getElementById('navigace');
+
+            tlacitko.addEventListener('click', () => {
+                const otevrene = tlacitko.getAttribute('data-open') === '1';
+                tlacitko.setAttribute('data-open', otevrene ? '0' : '1');
+                if (otevrene) nav.setAttribute('hidden', '');
+                else nav.removeAttribute('hidden');
+            });
+
+            document.getElementById('rok').textContent = new Date().getFullYear();
+        </script>
+
+</body>
+</html>

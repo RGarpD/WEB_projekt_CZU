@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moje klinika – Domů</title>
+    <link rel="icon" href="./logo.png" type="image/png">
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body>
+
+    <!-- HLAVIČKA -->
+    <header class="hlavicka">
+        <div class="logo-box">
+            <a href="./index.html">
+                <img src="./logo.png" alt="Logo kliniky" width="592">
+            </a>
+        </div>
+
+        <!-- tlačítko menu (hamburger) -->
+        <button id="tlacitkoMenu" class="hamburger">
+            <span></span><span></span><span></span>
+        </button>
+
+        <!-- navigace -->
+        <nav id="navigace" class="menu" hidden>
+            <ul>
+                <!--          DODĚLAT HREF!!!!!!!                   -->
+                <li><a href="./index.html">Domů</a></li>
+                <li><a href="./sluzby.html">Služby</a></li>
+                <li><a href="./tym.html">Náš tým</a></li>
+                <li><a href="./cenik.html">Ceník</a></li>
+                <li><a href="./kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- kontakt + jazyk -->
+    <section class="kontaktni-pruh">
+        <div class="telefon">
+            <svg viewBox="0 0 24 24" class="ikona"><path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2a1.3 1.3 0 011.4-.3 10.4 10.4 0 003.2.5 1.3 1.3 0 011.3 1.3v3.8a1.3 1.3 0 01-1.3 1.3A19.6 19.6 0 012 4.3 1.3 1.3 0 013.3 3h3.8A1.3 1.3 0 018.4 4.3c0 1.1.2 2.2.5 3.2.2.5 0 1.1-.3 1.4L6.6 10.8z" /></svg>
+            <a href="tel:+420111222111" class="cislo">+420 111 222 111</a>
+        </div>
+
+        <div class="jazyk">
+            <a href="#">CZ</a> / <a href="#">EN</a>
+        </div>
+    </section>
+
+    <!-- hlavní tlačítko -->
+    <div class="objednat">
+        <a class="tlacitko" href="./objednat.html">Objednat se</a>
+    </div>
+
+    <!-- HLAVNÍ OBSAH -->
+    <main class="obal">
+
+        <nav class="breadcrumbs">
+            <a href="./index.html">Domů</a>
+            <span>/</span>
+            <span>Služby</span>
+        </nav>
+
+        <!-- Služby -->
+        <section class="bubliny-sluzby">
+            <h2>Naše služby</h2>
+            <p>Poskytujeme komplexní péči v různých medicínských oborech. Každý z našich specialistů se zaměřuje na pečlivou diagnostiku, prevenci a osobní přístup k pacientovi.</p>
+
+            <div class="bubliny-grid">
+
+                <div class="bublina">
+                    <img src="./prakticky-lekar.jpg" alt="Praktický lékař">
+                    <h3>Praktický lékař</h3>
+                    <p>Preventivní prohlídky, očkování, předpis léků, konzultace a dlouhodobé sledování zdravotního stavu pacienta.</p>
+                    <a class="sluzba karta" href="./sluzby-1.html">Více</a>
+                </div>
+
+                <div class="bublina">
+                    <img src="./interna.jpg" alt="Interní lékařství">
+                    <h3>Interní lékařství</h3>
+                    <p>Diagnostika a sledování chronických onemocnění srdce, cév, plic, jater a ledvin. Komplexní interní péče.</p>
+                    <a class="sluzba karta" href="./sluzby-1.html">Více</a>
+                </div>
+
+                <div class="bublina">
+                    <img src="./ockovani.jpg" alt="Očkování">
+                    <h3>Očkování</h3>
+                    <p>Pravidelná, cestovní i nepovinná očkování. Individuální očkovací plán pro děti i dospělé, včetně přeočkování.</p>
+                    <a class="sluzba karta" href="./sluzby-1.html">Více</a>
+                </div>
+
+                <div class="bublina">
+                    <img src="./nefrologie.jpg" alt="Nefrologie">
+                    <h3>Nefrologie</h3>
+                    <p>Diagnostika, léčba a prevence onemocnění ledvin. Vyšetření funkce ledvin, krevní tlak a laboratorní testy.</p>
+                    <a class="sluzba karta" href="./sluzby-1.html">Více</a>
+                </div>
+
+                <div class="bublina">
+                    <img src="./orl.jpg" alt="ORL">
+                    <h3>ORL</h3>
+                    <p>Kompletní vyšetření uší, nosu a krku. Analýza obtíží, cílené fyzikální vyšetření a léčba akutních i chronických potíží.</p>
+                    <a class="sluzba karta" href="./sluzby-1.html">Více</a>
+                </div>
+
+                <div class="bublina">
+                    <img src="./gynekologie.jpg" alt="Gynekologie">
+                    <h3>Gynekologie</h3>
+                    <p>Pravidelné preventivní prohlídky, ultrazvuková vyšetření, cytologie a kolposkopie. Péče o ženy všech věkových skupin.</p>
+                    <a class="sluzba karta" href="./sluzby-1.html">Více</a>
+                </div>
+
+                <div class="bublina">
+                    <img src="./kardiologie.jpg" alt="Kardiologie">
+                    <h3>Kardiologie</h3>
+                    <p>Vyšetření srdce, EKG, ultrazvuk, kontrola tlaku a prevence kardiovaskulárních onemocnění.</p>
+                    <a class="sluzba karta" href="./sluzby-1.html">Více</a>
+                </div>
+
+                <div class="bublina">
+                    <img src="./dermatologie.jpg" alt="Dermatologie">
+                    <h3>Dermatologie</h3>
+                    <p>Vyšetření a léčba kožních potíží, alergických reakcí, ekzémů a znamének. Nabízíme i estetické ošetření pokožky.</p>
+                    <a class="sluzba karta" href="./sluzby-1.html">Více</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+        <!-- PATIČKA -->
+        <footer class="paticka">
+            <div class="container grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem">
+                <div>
+                    <p>&copy; <span id="rok"></span> Moje klinika</p>
+                    <p class="muted">Moderní ambulantní péče v centru Prahy.</p>
+                </div>
+                <div>
+                    <p style="font-weight:600">Kontakty</p>
+                    <ul class="list-reset muted">
+                        <li>+420 222 111 222</li>
+                        <li>info@mojeklinika.cz</li>
+                        <li>U Zdraví 12, Praha 1</li>
+                    </ul>
+                </div>
+                <div>
+                    <p style="font-weight:600">Rychlé odkazy</p>
+                    <ul class="list-reset">
+                        <!--            dod2lat                   -->
+                        <li><a href="./sluzby.html">Služby</a></li>
+                        <li><a href="./objednat.html">Rezervace</a></li>
+                        <li><a href="./kontakt.html">Kontakt</a></li>
+                        <li><a href="#">Ochrana osobních údajů</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p style="font-weight:600">Otevírací doba recepce</p>
+                    <p class="muted">Po–Pá 7:30–17:30</p>
+                    <p class="muted" style="font-size:.85rem;margin-top:1rem">© <span id="year"></span> MojeKlinika. Všechna práva vyhrazena.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- jednoduchý skript pro menu a rok -->
+        <script>
+            const tlacitko = document.getElementById('tlacitkoMenu');
+            const nav = document.getElementById('navigace');
+
+            tlacitko.addEventListener('click', () => {
+                const otevrene = tlacitko.getAttribute('data-open') === '1';
+                tlacitko.setAttribute('data-open', otevrene ? '0' : '1');
+                if (otevrene) nav.setAttribute('hidden', '');
+                else nav.removeAttribute('hidden');
+            });
+
+            document.getElementById('rok').textContent = new Date().getFullYear();
+        </script>
+
+</body>
+</html>
