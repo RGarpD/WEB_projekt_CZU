@@ -80,8 +80,8 @@
                 <div>
                     <h2 class="title" style="font-size:clamp(1.5rem,2vw,2rem)">Rychlá rezervace termínu</h2>
                     <p class="subtitle">Vyplňte údaje a my se vám ozveme s potvrzením.</p>
-                    <form class="card" onsubmit="event.preventDefault(); alert('Děkuji! Ozveme se vám.');">
-                        <div style="display:grid;gap:.75rem">
+                    <form id="rezervaceForm" class="card">
+                    <div style="display:grid;gap:.75rem">
                             <div style="display:grid;gap:.75rem;grid-template-columns:1fr;}">
                                 <label>
                                     <span class="muted" style="font-size:.9rem">Jméno a příjmení</span>
@@ -181,8 +181,16 @@
                 else nav.removeAttribute('hidden');
             });
 
-            document.getElementById('year').textContent = new Date().getFullYear();
+            document.getElementById('year').textContent = String(new Date().getFullYear());
         </script>
+
+        <script>
+            document.getElementById('rezervaceForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Děkuji! Ozveme se vám.');
+            });
+        </script>
+
 
 </body>
 </html>
