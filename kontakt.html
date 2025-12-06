@@ -26,7 +26,6 @@
         <!-- navigace -->
         <nav id="navigace" class="menu" hidden>
             <ul>
-                <!--          DODĚLAT HREF!!!!!!!                   -->
                 <li><a href="./index.html">Domů</a></li>
                 <li><a href="./sluzby.html">Služby</a></li>
                 <li><a href="./tym.html">Náš tým</a></li>
@@ -109,41 +108,42 @@
 
         </section>
 
-        <!-- EMAILOVÉ KONTAKTY -->
+        <!-- KONTAKTNÍ FORMULÁŘ -->
         <section style="margin-bottom:3rem;">
-            <h2>Emailové kontakty</h2>
-            <div class="emaily-grid" style="margin-top:1rem;">
-                <div class="card email-card">
-                    <strong>Recepce</strong>
-                    <a href="mailto:recepce@mojeklinika.cz">recepce@mojeklinika.cz</a>
-                </div>
+            <h2>Napiš nám</h2>
 
-                <div class="card email-card">
-                    <strong>Management</strong>
-                    <a href="mailto:management@mojeklinika.cz">management@mojeklinika.cz</a>
-                </div>
+            <form id="kontaktForm" class="card" style="padding:1.2rem;max-width:600px;margin-top:1rem;">
 
-                <div class="card email-card">
-                    <strong>Marketing</strong>
-                    <a href="mailto:marketing@mojeklinika.cz">marketing@mojeklinika.cz</a>
-                </div>
+                <label style="display:block;margin-bottom:1rem;">
+                    <span class="muted" style="font-size:.9rem;">E-mail *</span>
+                    <input type="email" id="email" required
+                           placeholder="např. tvoje@adresa.cz"
+                           style="width:100%;padding:.7rem .9rem;border:1px solid #ccd3e0;border-radius:.65rem;">
+                </label>
 
-                <div class="card email-card">
-                    <strong>Billing</strong>
-                    <a href="mailto:billing@mojeklinika.cz">billing@mojeklinika.cz</a>
-                </div>
+                <label style="display:block;margin-bottom:1rem;">
+                    <span class="muted" style="font-size:.9rem;">Zpráva *</span>
+                    <textarea id="zprava" rows="4" required
+                              placeholder="Napiš nám svou zprávu"
+                              style="width:100%;padding:.7rem .9rem;border:1px solid #ccd3e0;border-radius:.65rem;resize:vertical;"></textarea>
+                </label>
 
-                <div class="card email-card">
-                    <strong>Nabídka pro firmy</strong>
-                    <a href="mailto:company@mojeklinika.cz">company@mojeklinika.cz</a>
-                </div>
+                <button type="submit" class="btn">Odeslat zprávu</button>
 
-                <div class="card email-card">
-                    <strong>Náměty a připomínky</strong>
-                    <a href="mailto:director@mojeklinika.cz">director@mojeklinika.cz</a>
-                </div>
-            </div>
+                <p id="vysledek" style="color:green;font-weight:600;margin-top:1rem;display:none;">
+                    Zpráva byla odeslána.
+                </p>
+            </form>
         </section>
+
+        <script>
+            document.getElementById('kontaktForm').addEventListener('submit', function (e) {
+                e.preventDefault();                        // zastaví klasické odeslání
+                document.getElementById('vysledek').style.display = 'block'; // zobrazí hlášku
+                this.reset();                              // vymaže formulářová pole
+            });
+        </script>
+
 
         <!-- DOPRAVA -->
         <section style="margin-bottom:3rem;">
@@ -218,7 +218,6 @@
                 <div>
                     <p style="font-weight:600">Rychlé odkazy</p>
                     <ul class="list-reset">
-                        <!--            dod2lat                   -->
                         <li><a href="./sluzby.html">Služby</a></li>
                         <li><a href="./objednat.html">Rezervace</a></li>
                         <li><a href="./kontakt.html">Kontakt</a></li>
@@ -245,7 +244,7 @@
                 else nav.removeAttribute('hidden');
             });
 
-            document.getElementById('rok').textContent = new Date().getFullYear();
+            document.getElementById('year').textContent = new Date().getFullYear();
         </script>
 
 </body>
