@@ -1158,3 +1158,10 @@ aside.card {
 #kontaktForm button.btn {
     margin-top: 0.25rem;
 }
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

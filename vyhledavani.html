@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moje klinika – Výsledky vyhledávání</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="hlavicka">
+    <button id="tlacitkoMenu" class="hamburger">
+        <span></span><span></span><span></span>
+    </button>
+
+    <a href="index.html" class="logo">
+        <img src="logo.png" alt="Logo Moje klinika">
+    </a>
+
+    <nav id="navigace" class="menu" hidden>
+        <ul>
+            <li><a href="index.html">Domů</a></li>
+            <li><a href="sluzby.html">Služby</a></li>
+            <li><a href="tym.html">Tým</a></li>
+            <li><a href="cenik.html">Ceník</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="objednat.html">Objednat</a></li>
+        </ul>
+    </nav>
+
+    <div class="search-box">
+        <label for="search" class="visually-hidden">Vyhledávání</label>
+        <input id="search" type="text" placeholder="Hledat…" class="search-input">
+    </div>
+</header>
+
+
+<main class="obsah">
+
+    <section class="uvod">
+        <h1>Výsledky vyhledávání</h1>
+        <p class="subtitle">Hledaný výraz: <strong>„praktický lékař“</strong></p>
+    </section>
+
+    <section class="vysledky">
+
+        <article class="karta">
+            <h2><a href="sluzby-1.html">Praktický lékař</a></h2>
+            <p>Komplexní preventivní a diagnostická péče pro dospělé. Objednejte se na preventivní prohlídku nebo konzultaci.</p>
+        </article>
+
+        <article class="karta">
+            <h2><a href="doktor.html">MUDr. Jana Nováková – Praktická lékařka</a></h2>
+            <p>Specialistka na preventivní medicínu a dlouhodobou péči o dospělé pacienty.</p>
+        </article>
+
+        <article class="karta">
+            <h2><a href="cenik.html">Ceník – Preventivní vyšetření</a></h2>
+            <p>Ceny diagnostických a preventivních služeb včetně očkování a laboratorních vyšetření.</p>
+        </article>
+
+        <article class="karta">
+            <h2><a href="kontakt.html">Kontakt – Objednání k lékaři</a></h2>
+            <p>Kudy k nám, otevírací doba, telefonní číslo a další informace pro rychlé objednání.</p>
+        </article>
+
+    </section>
+
+    <section class="nic-nenalezeno" hidden>
+        <h2>Nebyly nalezeny žádné výsledky</h2>
+        <p>Zkuste upravit hledaný výraz nebo přejděte na stránku <a href="sluzby.html">Služby</a>.</p>
+    </section>
+
+</main>
+
+
+<footer class="paticka">
+
+    <p>&copy; <span id="year"></span> Moje klinika</p>
+
+    <p class="muted" style="margin-top:1rem;">
+        <strong>Studentský projekt</strong> – vytvořeno v rámci předmětu Web design, ČZU (2025).
+        Autoři: Ruslan Galiaskarov, Pavel Petr, Ondřej Trita, Daniel Petrů.
+    </p>
+</footer>
+
+<script>
+    // hamburger menu
+    const tlacitko = document.getElementById('tlacitkoMenu');
+    const nav = document.getElementById('navigace');
+
+    tlacitko.addEventListener('click', () => {
+        const otevrene = tlacitko.getAttribute('data-open') === '1';
+        tlacitko.setAttribute('data-open', otevrene ? '0' : '1');
+        if (otevrene) nav.removeAttribute('hidden');
+        else nav.setAttribute('hidden', '');
+    });
+
+    // rok v patičce
+    document.getElementById('year').textContent = String(new Date().getFullYear());
+</script>
+
+</body>
+</html>

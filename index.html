@@ -121,15 +121,26 @@
                 <th scope="col">Čas</th>
             </tr>
             </thead>
+
             <tbody>
             <tr>
                 <th scope="row">Po–Čt</th>
-                <td>8:00–17:00</td>
+                <td>
+                    <time datetime="08:00">8:00</time>
+                    –
+                    <time datetime="17:00">17:00</time>
+                </td>
             </tr>
+
             <tr>
                 <th scope="row">Pá</th>
-                <td>8:00–15:00</td>
+                <td>
+                    <time datetime="08:00">8:00</time>
+                    –
+                    <time datetime="15:00">15:00</time>
+                </td>
             </tr>
+
             <tr>
                 <th scope="row">So–Ne</th>
                 <td>Zavřeno</td>
@@ -137,6 +148,7 @@
             </tbody>
         </table>
     </section>
+
 
     <!-- proč my sekce -->
     <section class="membership-section">
@@ -195,7 +207,7 @@
 <footer class="paticka">
     <div class="container grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem">
         <div>
-            <p>&copy; <span id="rok"></span> Moje klinika</p>
+            <p>&copy; <span id="year"></span> Moje klinika</p>
             <p class="muted">Moderní ambulantní péče v centru Prahy.</p>
         </div>
         <div>
@@ -220,6 +232,12 @@
             <p class="muted">Po–Pá 7:30–17:30</p>
         </div>
     </div>
+
+    <p class="muted" style="margin-top:1rem;">
+        <strong>Studentský projekt</strong> – vytvořeno v rámci předmětu Web design, ČZU (2025).
+        Autoři: Ruslan Galiaskarov, Pavel Petr, Ondřej Trita, Daniel Petrů.
+    </p>
+
 </footer>
 
 <script>
