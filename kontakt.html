@@ -6,279 +6,298 @@
     <title>Moje klinika – Kontakt</title>
     <link rel="icon" href="./logo.png" type="image/png">
     <link rel="stylesheet" href="./styles.css">
-
 </head>
 <body>
 
-    <!-- HLAVIČKA -->
-    <header class="hlavicka">
-        <div class="logo-box">
-            <a href="./index.html">
-                <img src="./logo.png" alt="Logo kliniky" width="592">
-            </a>
-        </div>
+<!-- HLAVIČKA  -->
+<header class="hlavicka">
 
-        <!-- tlačítko menu (hamburger) -->
-        <button id="tlacitkoMenu" class="hamburger">
+    <!-- logo + název + menu -->
+    <div class="hlavicka-r1">
+        <a href="index.html" class="brand">
+            <img src="logoMIN.png" alt="Logo kliniky" class="brand-logo">
+            <span class="brand-name">Moje&nbsp;klinika</span>
+        </a>
+
+        <!-- HAMBURGER -->
+        <button id="hamburger" class="hamburger" data-open="0">
             <span></span><span></span><span></span>
         </button>
 
-        <!-- navigace -->
+        <!-- NAVIGACE -->
         <nav id="navigace" class="menu" hidden>
-            <ul>
-                <li><a href="./index.html">Domů</a></li>
-                <li><a href="./sluzby.html">Služby</a></li>
-                <li><a href="./tym.html">Náš tým</a></li>
-                <li><a href="./cenik.html">Ceník</a></li>
-                <li><a href="./kontakt.html">Kontakt</a></li>
-            </ul>
+            <a href="index.html">Domů</a>
+            <a href="sluzby.html">Služby</a>
+            <a href="tym.html">Náš tým</a>
+            <a href="cenik.html">Ceník</a>
+            <a href="kontakt.html">Kontakt</a>
+
+            <!-- jazykové přepínátko dole v hamburgeru -->
+            <div class="menu-lang">
+                <a href="#" class="menu-lang-link jazyk-aktivni">CZ</a>
+                <span>/</span>
+                <a href="#" class="menu-lang-link">EN</a>
+            </div>
         </nav>
-        <div class="search-wrapper">
-            <label for="search" class="visually-hidden">Vyhledávání</label>
-            <input id="search" type="text" placeholder="Hledat…" class="search-input">
+    </div>
 
-            <button class="search-btn" id="searchBtn" aria-label="Vyhledat">
-                <!-- jednoduchá lupa (SVG) -->
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="7"></circle>
-                    <line x1="16" y1="16" x2="22" y2="22"></line>
-                </svg>
-            </button>
-        </div>
-
-    </header>
-
-    <!-- kontakt + jazyk -->
-    <section class="kontaktni-pruh">
-        <div class="telefon">
-            <svg viewBox="0 0 24 24" class="ikona"><path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2a1.3 1.3 0 011.4-.3 10.4 10.4 0 003.2.5 1.3 1.3 0 011.3 1.3v3.8a1.3 1.3 0 01-1.3 1.3A19.6 19.6 0 012 4.3 1.3 1.3 0 013.3 3h3.8A1.3 1.3 0 018.4 4.3c0 1.1.2 2.2.5 3.2.2.5 0 1.1-.3 1.4L6.6 10.8z" /></svg>
+    <!-- telefon + objednat se + lupa + jazyk -->
+    <div class="hlavicka-r2">
+        <div class="kontakt-info">
+            <!-- černá ikonka telefonu -->
+            <svg viewBox="0 0 24 24" class="ikona-telefon">
+                <path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2a1.3 1.3 0 011.4-.3 10.4 10.4 0 003.2.5 1.3 1.3 0 011.3 1.3v3.8a1.3 1.3 0 01-1.3 1.3A19.6 19.6 0 012 4.3 1.3 1.3 0 013.3 3h3.8A1.3 1.3 0 018.4 4.3c0 1.1.2 2.2.5 3.2.2.5 0 1.1-.3 1.4L6.6 10.8z"/>
+            </svg>
             <a href="tel:+420111222111" class="cislo">+420 111 222 111</a>
         </div>
 
-        <div class="jazyk">
-            <a href="#">CZ</a> / <a href="#">EN</a>
+        <a class="tlacitko hlavni-tlacitko" href="./objednat.html">Objednat se</a>
+
+        <div class="hlavicka-vpravo">
+            <div class="search-wrapper">
+                <label for="search" class="visually-hidden">Hledat</label>
+                <input type="text" id="search" class="search-input" placeholder="Hledat...">
+                <button id="searchBtn" class="search-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="16" y1="16" x2="22" y2="22"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="jazyk">
+                <a href="#" class="jazyk-aktivni">CZ</a> / <a href="#">EN</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- HLAVNÍ OBSAH -->
+<main class="obal">
+
+    <div class="breadcrumbs">
+        <a href="./index.html">Domů</a>
+        <span>/</span>
+        <span>Kontakt</span>
+    </div>
+
+    <section class="kontakt-uvod" style="padding: 1rem 0 2rem;">
+        <h1 style="font-size:2rem; margin-bottom: .5rem;">Kontakt</h1>
+        <p class="muted" style="max-width:60ch;">
+            Jsme tady pro tebe, kdykoliv nás potřebuješ. Ráda ti pomohu objednat vyšetření,
+            zodpovím tvoje dotazy a nabídnu nejvhodnější termín. Kontaktovat nás můžeš telefonicky,
+            e-mailem nebo využít online objednávku.
+        </p>
+    </section>
+
+    <section class="grid grid-2" style="margin-bottom:2rem;">
+
+        <!-- LEVÁ BUBLINA -->
+        <div class="card kontakt-bublina">
+            <h2>Kontaktní údaje</h2>
+
+            <div class="kontakt-box">
+                <span>📞</span> <a href="tel:+420111222111">+420 111 222 111</a>
+            </div>
+
+            <div class="kontakt-box">
+                <span>✉️</span> <a href="mailto:info@mojeklinika.cz">info@mojeklinika.cz</a>
+            </div>
+
+            <div class="kontakt-box">
+                <span>📍</span> U Zdraví 12, Praha 1
+            </div>
+        </div>
+
+        <!-- PRAVÁ BUBLINA -->
+        <div class="card kontakt-bublina">
+            <h2>Otevírací doba recepce</h2>
+
+            <table class="tabulka">
+                <tr><td>Pondělí</td><td>7:30 – 17:30</td></tr>
+                <tr><td>Úterý</td><td>7:30 – 17:30</td></tr>
+                <tr><td>Středa</td><td>7:30 – 17:30</td></tr>
+                <tr><td>Čtvrtek</td><td>7:30 – 17:30</td></tr>
+                <tr><td>Pátek</td><td>7:30 – 17:30</td></tr>
+            </table>
+
+            <p class="muted" style="font-size:.9rem; margin-top:1rem;">
+                Časy jednotlivých odborných ambulancí se mohou lišit.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- KONTAKTNÍ FORMULÁŘ -->
+    <section style="margin-bottom:3rem;">
+        <h2>Napiš nám</h2>
+
+        <form id="kontaktForm" class="card" style="padding:1.2rem;max-width:600px;margin-top:1rem;">
+
+            <label style="display:block;margin-bottom:1rem;">
+                <span class="muted" style="font-size:.9rem;">E-mail *</span>
+                <input type="email" id="email" required
+                       placeholder="vaše@adresa.cz"
+                       style="width:100%;padding:.7rem .9rem;border:1px solid #ccd3e0;border-radius:.65rem;">
+            </label>
+
+            <label style="display:block;margin-bottom:1rem;">
+                <span class="muted" style="font-size:.9rem;">Zpráva *</span>
+                <textarea id="zprava" rows="4" required
+                          placeholder="Napiš nám svou zprávu"
+                          style="width:100%;padding:.7rem .9rem;border:1px solid #ccd3e0;border-radius:.65rem;resize:vertical;"></textarea>
+            </label>
+
+            <button type="submit" class="btn">Odeslat zprávu</button>
+
+            <p id="vysledek" style="color:green;font-weight:600;margin-top:1rem;display:none;">
+                Zpráva byla odeslána.
+            </p>
+        </form>
+    </section>
+
+    <!-- DOPRAVA -->
+    <section style="margin-bottom:3rem;">
+        <h2>Doprava</h2>
+
+        <div class="grid grid-2" style="gap:2rem; margin-top:1rem;">
+
+            <!-- MHD -->
+            <div>
+                <h3>Jedeš k nám MHD?</h3>
+                <p class="muted">Jsme dostupné z několika zastávek v okolí:</p>
+
+                <ul style="line-height:1.7; margin-top:.5rem;">
+                    <li>🚋 <strong>Zastávka – tram</strong> č. 6, 11, 14</li>
+                    <li>🚌 <strong>Zastávka – bus</strong> č. 108, 131, 312, 361</li>
+                    <li>🚇 <strong>Metro A</strong> – stanice Pražská</li>
+                </ul>
+            </div>
+
+            <!-- AUTEM -->
+            <div>
+                <h3>Jedeš autem?</h3>
+                <p class="muted">Parkovat můžeš pohodlně přímo v okolí kliniky:</p>
+
+                <ol style="line-height:1.7; margin-top:.5rem;">
+                    <li><strong>Parkoviště zdarma</strong> – omezený počet míst</li>
+                    <li><strong>Placené parkoviště</strong> před budovou (40 Kč/hod)</li>
+                    <li><strong>Veřejné parkování</strong> v ulici U zdraví – zdarma</li>
+                    <li><strong>Parkovací dům</strong> v docházkové vzdálenosti</li>
+                </ol>
+            </div>
+
         </div>
     </section>
 
-    <!-- hlavní tlačítko -->
-    <div class="objednat">
-        <a class="tlacitko" href="./objednat.html">Objednat se</a>
+    <!-- FIREMNÍ ÚDAJE -->
+    <section style="margin-bottom:3rem;">
+        <h2>Firemní a fakturační údaje</h2>
+
+        <div class="card firemni-box">
+            <p><strong>Název:</strong> Moje Klinika s.r.o.</p>
+            <p><strong>IČO:</strong> 123 45 678</p>
+            <p><strong>Schránka:</strong> AB11cd3</p>
+
+            <p style="margin-top:1rem;"><strong>Bankovní účet v Kč:</strong> 1412750267/0100</p>
+            <p><strong>IBAN:</strong> CZ79 0100 0000 1412 7502 67</p>
+            <p><strong>BIC/SWIFT:</strong> KOMBCZPPXXX</p>
+
+            <p style="margin-top:1rem;"><strong>Bankovní účet v EUR:</strong> 1153243810247/0100</p>
+            <p><strong>IBAN:</strong> CZ21 0100 0001 1532 4381 0247</p>
+            <p><strong>BIC/SWIFT:</strong> KOMBCZPPXXXM</p>
+        </div>
+    </section>
+
+</main>
+
+<!-- PATIČKA -->
+<footer class="paticka">
+    <div class="container grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem">
+        <div>
+            <p>&copy; <span id="year"></span> Moje klinika</p>
+            <p class="muted">Moderní ambulantní péče v centru Prahy.</p>
+        </div>
+        <div>
+            <p style="font-weight:600">Kontakty</p>
+            <ul class="list-reset muted">
+                <li>+420 222 111 222</li>
+                <li>info@mojeklinika.cz</li>
+                <li>U Zdraví 12, Praha 1</li>
+            </ul>
+        </div>
+        <div>
+            <p style="font-weight:600">Rychlé odkazy</p>
+            <ul class="list-reset">
+                <li><a href="./sluzby.html">Služby</a></li>
+                <li><a href="./objednat.html">Rezervace</a></li>
+                <li><a href="./kontakt.html">Kontakt</a></li>
+                <li><a href="#">Ochrana osobních údajů</a></li>
+            </ul>
+        </div>
+        <div>
+            <p style="font-weight:600">Otevírací doba recepce</p>
+            <p class="muted">Po–Pá 7:30–17:30</p>
+        </div>
     </div>
 
-    <!-- HLAVNÍ OBSAH -->
-    <main class="obal">
+    <p class="muted" style="margin-top:1rem;">
+        <strong>Studentský projekt</strong> – vytvořeno v rámci předmětu Web design, ČZU (2025).
+        Autoři: Ruslan Galiaskarov, Pavel Petr, Ondřej Trita, Daniel Petrů.
+    </p>
+</footer>
 
-        <div class="breadcrumbs">
-            <a href="./index.html">Domů</a>
-            <span>/</span>
-            <span>Kontakt</span>
-        </div>
+<script>
+    // hamburger + menu
+    const tlacitko = document.getElementById('hamburger');
+    const nav = document.getElementById('navigace');
 
-        <section class="kontakt-uvod" style="padding: 1rem 0 2rem;">
-            <h1 style="font-size:2rem; margin-bottom: .5rem;">Kontakt</h1>
-            <p class="muted" style="max-width:60ch;">
-                Jsme tady pro tebe, kdykoliv nás potřebuješ. Ráda ti pomohu objednat vyšetření,
-                zodpovím tvoje dotazy a nabídnu nejvhodnější termín. Kontaktovat nás můžeš telefonicky,
-                e-mailem nebo využít online objednávku.
-            </p>
-        </section>
-
-        <section class="grid grid-2" style="margin-bottom:2rem;">
-
-            <!-- LEVÁ BUBLINA -->
-            <div class="card kontakt-bublina">
-                <h2>Kontaktní údaje</h2>
-
-                <div class="kontakt-box">
-                    <span>📞</span> <a href="tel:+420111222111">+420 111 222 111</a>
-                </div>
-
-                <div class="kontakt-box">
-                    <span>✉️</span> <a href="mailto:info@mojeklinika.cz">info@mojeklinika.cz</a>
-                </div>
-
-                <div class="kontakt-box">
-                    <span>📍</span> U Zdraví 12, Praha 1
-                </div>
-            </div>
-
-            <!-- PRAVÁ BUBLINA -->
-            <div class="card kontakt-bublina">
-                <h2>Otevírací doba recepce</h2>
-
-                <table class="tabulka">
-                    <tr><td>Pondělí</td><td>7:30 – 17:30</td></tr>
-                    <tr><td>Úterý</td><td>7:30 – 17:30</td></tr>
-                    <tr><td>Středa</td><td>7:30 – 17:30</td></tr>
-                    <tr><td>Čtvrtek</td><td>7:30 – 17:30</td></tr>
-                    <tr><td>Pátek</td><td>7:30 – 17:30</td></tr>
-                </table>
-
-                <p class="muted" style="font-size:.9rem; margin-top:1rem;">
-                    Časy jednotlivých odborných ambulancí se mohou lišit.
-                </p>
-            </div>
-
-        </section>
-
-        <!-- KONTAKTNÍ FORMULÁŘ -->
-        <section style="margin-bottom:3rem;">
-            <h2>Napiš nám</h2>
-
-            <form id="kontaktForm" class="card" style="padding:1.2rem;max-width:600px;margin-top:1rem;">
-
-                <label style="display:block;margin-bottom:1rem;">
-                    <span class="muted" style="font-size:.9rem;">E-mail *</span>
-                    <input type="email" id="email" required
-                           placeholder="vaše@adresa.cz"
-                           style="width:100%;padding:.7rem .9rem;border:1px solid #ccd3e0;border-radius:.65rem;">
-                </label>
-
-                <label style="display:block;margin-bottom:1rem;">
-                    <span class="muted" style="font-size:.9rem;">Zpráva *</span>
-                    <textarea id="zprava" rows="4" required
-                              placeholder="Napiš nám svou zprávu"
-                              style="width:100%;padding:.7rem .9rem;border:1px solid #ccd3e0;border-radius:.65rem;resize:vertical;"></textarea>
-                </label>
-
-                <button type="submit" class="btn">Odeslat zprávu</button>
-
-                <p id="vysledek" style="color:green;font-weight:600;margin-top:1rem;display:none;">
-                    Zpráva byla odeslána.
-                </p>
-            </form>
-        </section>
-
-        <script>
-            document.getElementById('kontaktForm').addEventListener('submit', function (e) {
-                e.preventDefault();                        // zastaví klasické odeslání
-                document.getElementById('vysledek').style.display = 'block'; // zobrazí hlášku
-                this.reset();                              // vymaže formulářová pole
-            });
-        </script>
-
-
-        <!-- DOPRAVA -->
-        <section style="margin-bottom:3rem;">
-            <h2>Doprava</h2>
-
-            <div class="grid grid-2" style="gap:2rem; margin-top:1rem;">
-
-                <!-- MHD -->
-                <div>
-                    <h3>Jedeš k nám MHD?</h3>
-                    <p class="muted">Jsme dostupné z několika zastávek v okolí:</p>
-
-                    <ul style="line-height:1.7; margin-top:.5rem;">
-                        <li>🚋 <strong>Zastávka – tram</strong> č. 6, 11, 14</li>
-                        <li>🚌 <strong>Zastávka – bus</strong> č. 108, 131, 312, 361</li>
-                        <li>🚇 <strong>Metro A</strong> – stanice Pražská</li>
-                    </ul>
-                </div>
-
-                <!-- AUTEM -->
-                <div>
-                    <h3>Jedeš autem?</h3>
-                    <p class="muted">Parkovat můžeš pohodlně přímo v okolí kliniky:</p>
-
-                    <ol style="line-height:1.7; margin-top:.5rem;">
-                        <li><strong>Parkoviště zdarma</strong> – omezený počet míst</li>
-                        <li><strong>Placené parkoviště</strong> před budovou (40 Kč/hod)</li>
-                        <li><strong>Veřejné parkování</strong> v ulici U zdraví – zdarma</li>
-                        <li><strong>Parkovací dům</strong> v docházkové vzdálenosti</li>
-                    </ol>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- FIREMNÍ ÚDAJE -->
-        <section style="margin-bottom:3rem;">
-            <h2>Firemní a fakturační údaje</h2>
-
-            <div class="card firemni-box">
-                <p><strong>Název:</strong> Moje Klinika s.r.o.</p>
-                <p><strong>IČO:</strong> 123 45 678</p>
-                <p><strong>Schránka:</strong> AB11cd3</p>
-
-                <p style="margin-top:1rem;"><strong>Bankovní účet v Kč:</strong> 1412750267/0100</p>
-                <p><strong>IBAN:</strong> CZ79 0100 0000 1412 7502 67</p>
-                <p><strong>BIC/SWIFT:</strong> KOMBCZPPXXX</p>
-
-                <p style="margin-top:1rem;"><strong>Bankovní účet v EUR:</strong> 1153243810247/0100</p>
-                <p><strong>IBAN:</strong> CZ21 0100 0001 1532 4381 0247</p>
-                <p><strong>BIC/SWIFT:</strong> KOMBCZPPXXXM</p>
-            </div>
-        </section>
-
-    </main>
-
-        <!-- PATIČKA -->
-        <footer class="paticka">
-            <div class="container grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem">
-                <div>
-                    <p>&copy; <span id="year"></span> Moje klinika</p>
-                    <p class="muted">Moderní ambulantní péče v centru Prahy.</p>
-                </div>
-                <div>
-                    <p style="font-weight:600">Kontakty</p>
-                    <ul class="list-reset muted">
-                        <li>+420 222 111 222</li>
-                        <li>info@mojeklinika.cz</li>
-                        <li>U Zdraví 12, Praha 1</li>
-                    </ul>
-                </div>
-                <div>
-                    <p style="font-weight:600">Rychlé odkazy</p>
-                    <ul class="list-reset">
-                        <li><a href="./sluzby.html">Služby</a></li>
-                        <li><a href="./objednat.html">Rezervace</a></li>
-                        <li><a href="./kontakt.html">Kontakt</a></li>
-                        <li><a href="#">Ochrana osobních údajů</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <p style="font-weight:600">Otevírací doba recepce</p>
-                    <p class="muted">Po–Pá 7:30–17:30</p>
-                    </div>
-            </div>
-
-            <p class="muted" style="margin-top:1rem;">
-                <strong>Studentský projekt</strong> – vytvořeno v rámci předmětu Web design, ČZU (2025).
-                Autoři: Ruslan Galiaskarov, Pavel Petr, Ondřej Trita, Daniel Petrů.
-            </p>
-        </footer>
-
-    <script>
-        // hamburger + menu
-        const tlacitko = document.getElementById('tlacitkoMenu');
-        const nav = document.getElementById('navigace');
-
+    if (tlacitko && nav) {
         tlacitko.addEventListener('click', () => {
             const otevrene = tlacitko.getAttribute('data-open') === '1';
             tlacitko.setAttribute('data-open', otevrene ? '0' : '1');
-            if (otevrene) nav.setAttribute('hidden', '');
-            else nav.removeAttribute('hidden');
+            if (otevrene) {
+                nav.setAttribute('hidden', '');
+            } else {
+                nav.removeAttribute('hidden');
+            }
         });
+    }
 
-        // rok v patičce
-        document.getElementById('year').textContent =
-            String(new Date().getFullYear());
+    // rok v patičce
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+        yearSpan.textContent = String(new Date().getFullYear());
+    }
 
-        // vyhledávání
-        const searchBtn = document.getElementById('searchBtn');
-        const searchInput = document.getElementById('search');
+    // vyhledávání
+    const searchBtn = document.getElementById('searchBtn');
+    const searchInput = document.getElementById('search');
 
-        if (searchBtn && searchInput) {
-            searchBtn.addEventListener('click', () => {
-                const dotaz = searchInput.value.trim();
-                if (dotaz) {
-                    window.location.href =
-                        `vyhledavani.html?search=${encodeURIComponent(dotaz)}`;
-                }
-            });
-        }
-    </script>
+    if (searchBtn && searchInput) {
+        searchBtn.addEventListener('click', () => {
+            const dotaz = searchInput.value.trim();
+            if (dotaz) {
+                window.location.href =
+                    `vyhledavani.html?search=${encodeURIComponent(dotaz)}`;
+            }
+        });
+    }
+
+    // kontakt formulář
+    const kontaktForm = document.getElementById('kontaktForm');
+    if (kontaktForm) {
+        kontaktForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const vysledek = document.getElementById('vysledek');
+            if (vysledek) {
+                vysledek.style.display = 'block';
+            }
+            this.reset();
+        });
+    }
+</script>
 
 </body>
 </html>

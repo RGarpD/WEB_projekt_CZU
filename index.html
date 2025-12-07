@@ -6,75 +6,84 @@
     <title>Moje klinika – Domů</title>
     <link rel="icon" href="./logo.png" type="image/png">
     <link rel="stylesheet" href="./styles.css">
-
 </head>
 <body>
 
-<!-- HLAVIČKA -->
+<!-- HLAVIČKA  -->
 <header class="hlavicka">
-    <div class="logo-box">
-        <a href="./index.html">
-            <img src="./logo.png" alt="Logo kliniky" width="592">
+
+    <!-- logo + název + hamburger + menu -->
+    <div class="hlavicka-r1">
+        <a href="index.html" class="brand">
+            <img src="logoMIN.png" alt="Logo kliniky" class="brand-logo">
+            <span class="brand-name">Moje&nbsp;klinika</span>
         </a>
-    </div>
 
-    <!-- tlačítko menu (hamburger) -->
-    <button id="tlacitkoMenu" class="hamburger">
-        <span></span><span></span><span></span>
-    </button>
-
-    <!-- navigace -->
-    <nav id="navigace" class="menu" hidden>
-        <ul>
-            <li><a href="./index.html">Domů</a></li>
-            <li><a href="./sluzby.html">Služby</a></li>
-            <li><a href="./tym.html">Náš tým</a></li>
-            <li><a href="./cenik.html">Ceník</a></li>
-            <li><a href="./kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
-    <div class="search-wrapper">
-        <label for="search" class="visually-hidden">Vyhledávání</label>
-        <input id="search" type="text" placeholder="Hledat…" class="search-input">
-
-        <button class="search-btn" id="searchBtn" aria-label="Vyhledat">
-            <!-- jednoduchá lupa (SVG) -->
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="11" cy="11" r="7"></circle>
-                <line x1="16" y1="16" x2="22" y2="22"></line>
-            </svg>
+        <!-- HAMBURGER -->
+        <button id="hamburger" class="hamburger" data-open="0" aria-label="Otevřít hlavní menu">
+            <span></span><span></span><span></span>
         </button>
+
+        <!-- NAVIGACE -->
+        <nav id="navigace" class="menu" hidden>
+            <a href="index.html">Domů</a>
+            <a href="sluzby.html">Služby</a>
+            <a href="tym.html">Náš tým</a>
+            <a href="cenik.html">Ceník</a>
+            <a href="kontakt.html">Kontakt</a>
+
+            <!-- jazykové přepínátko dole v hamburgeru -->
+            <div class="menu-lang">
+                <a href="#" class="menu-lang-link jazyk-aktivni">CZ</a>
+                <span>/</span>
+                <a href="#" class="menu-lang-link">EN</a>
+            </div>
+        </nav>
     </div>
 
+    <!-- telefon + objednat se + lupa + jazyk -->
+    <div class="hlavicka-r2">
+        <div class="kontakt-info">
+            <!-- černá ikonka telefonu -->
+            <svg viewBox="0 0 24 24" class="ikona-telefon">
+                <path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2a1.3 1.3 0 011.4-.3 10.4 10.4 0 003.2.5 1.3 1.3 0 011.3 1.3v3.8a1.3 1.3 0 01-1.3 1.3A19.6 19.6 0 012 4.3 1.3 1.3 0 013.3 3h3.8A1.3 1.3 0 018.4 4.3c0 1.1.2 2.2.5 3.2.2.5 0 1.1-.3 1.4L6.6 10.8z"/>
+            </svg>
+            <a href="tel:+420111222111" class="cislo">+420 111 222 111</a>
+        </div>
 
+        <a class="tlacitko hlavni-tlacitko" href="./objednat.html">Objednat se</a>
+
+        <div class="hlavicka-vpravo">
+            <div class="search-wrapper">
+                <label for="search" class="visually-hidden">Hledat</label>
+                <input type="text" id="search" class="search-input" placeholder="Hledat...">
+                <button id="searchBtn" class="search-btn" aria-label="Hledat">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="16" y1="16" x2="22" y2="22"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="jazyk">
+                <a href="#" class="jazyk-aktivni">CZ</a> / <a href="#">EN</a>
+            </div>
+        </div>
+    </div>
 </header>
 
-<!-- kontakt + jazyk -->
-<section class="kontaktni-pruh">
-    <div class="telefon">
-        <svg viewBox="0 0 24 24" class="ikona"><path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2a1.3 1.3 0 011.4-.3 10.4 10.4 0 003.2.5 1.3 1.3 0 011.3 1.3v3.8a1.3 1.3 0 01-1.3 1.3A19.6 19.6 0 012 4.3 1.3 1.3 0 013.3 3h3.8A1.3 1.3 0 018.4 4.3c0 1.1.2 2.2.5 3.2.2.5 0 1.1-.3 1.4L6.6 10.8z"/></svg>
-        <a href="tel:+420111222111" class="cislo">+420 111 222 111</a>
-    </div>
-
-    <div class="jazyk">
-        <a href="#">CZ</a> / <a href="#">EN</a>
-    </div>
-</section>
-
-<!-- hlavní tlačítko -->
-<div class="objednat">
-    <a class="tlacitko" href="./objednat.html">Objednat se</a>
-</div>
-
-<!-- HLAVNÍ OBSAH -->
 <main class="obal">
     <!-- o klinice -->
     <section class="o-klinice">
         <h1>Moje klinika</h1>
-        <p>Moje klinika nabízí moderní ambulantní péči na jednom místě – od praktického lékaře až po vybrané odborné ambulance. Zakládáme si na osobním přístupu, srozumitelném vysvětlení postupu a dostatku času na každého pacienta.</p>
-        <p>Naše péče je rychlá, koordinovaná a přehledná. Díky online objednávání a jasně plánovaným kontrolám minimalizujeme čekání i zbytečnou administrativu. Cílem je, aby ses u nás cítila jistě, rozuměla svému zdravotnímu plánu a měla vždy jasný další krok.</p>
+        <p>Moje klinika nabízí moderní ambulantní péči na jednom místě – od praktického lékaře až po vybrané odborné
+            ambulance. Zakládáme si na osobním přístupu, srozumitelném vysvětlení postupu a dostatku času na každého
+            pacienta.</p>
+        <p>Naše péče je rychlá, koordinovaná a přehledná. Díky online objednávání a jasně plánovaným kontrolám
+            minimalizujeme čekání i zbytečnou administrativu. Cílem je, aby ses u nás cítila jistě, rozuměla svému
+            zdravotnímu plánu a měla vždy jasný další krok.</p>
     </section>
-
 
     <!-- naše služby -->
     <section class="sluzby">
@@ -163,11 +172,11 @@
         </table>
     </section>
 
-
     <!-- proč my sekce -->
     <section class="membership-section">
         <h2>Proč se vyplatí být členem naší kliniky?</h2>
-        <p>Komplexní zdravotní péče po celý rok. Vyber si z několika balíčků podle svých potřeb a životního stylu. Členství přináší výhody, pohodlí i jistotu, že se o tvé zdraví stará tým odborníků.</p>
+        <p>Komplexní zdravotní péče po celý rok. Vyber si z několika balíčků podle svých potřeb a životního stylu.
+            Členství přináší výhody, pohodlí i jistotu, že se o tvé zdraví stará tým odborníků.</p>
         <div class="membership-columns">
             <ul>
                 <li><strong>Neomezené</strong> návštěvy praktického lékaře</li>
@@ -192,32 +201,36 @@
 
         <details class="karta">
             <summary><strong>Berete nové pacienty?</strong></summary>
-            <p class="muted">Ano, aktuálně přijímáme nové pacienty. Stačí se objednat přes online formulář, telefonicky nebo e-mailem.</p>
+            <p class="muted">Ano, aktuálně přijímáme nové pacienty. Stačí se objednat přes online formulář, telefonicky
+                nebo e-mailem.</p>
         </details>
 
         <details class="karta">
             <summary><strong>Jak se mohu objednat?</strong></summary>
-            <p class="muted">Nejrychlejší je online objednání přes náš formulář. Pokud preferuješ osobní kontakt, můžeš zavolat na recepci.</p>
+            <p class="muted">Nejrychlejší je online objednání přes náš formulář. Pokud preferuješ osobní kontakt, můžeš
+                zavolat na recepci.</p>
         </details>
 
         <details class="karta">
             <summary><strong>Jaké pojišťovny přijímáte?</strong></summary>
-            <p class="muted">Spolupracujeme se všemi hlavními zdravotními pojišťovnami v ČR – VZP, OZP, ZPMV, VoZP, ČPZP i RBP.</p>
+            <p class="muted">Spolupracujeme se všemi hlavními zdravotními pojišťovnami v ČR – VZP, OZP, ZPMV, VoZP,
+                ČPZP i RBP.</p>
         </details>
 
         <details class="karta">
             <summary><strong>Jak funguje objednání na preventivní prohlídku?</strong></summary>
-            <p class="muted">Preventivní prohlídku doporučujeme plánovat s předstihem. Termín si můžeš rezervovat online nebo telefonicky.</p>
+            <p class="muted">Preventivní prohlídku doporučujeme plánovat s předstihem. Termín si můžeš rezervovat online
+                nebo telefonicky.</p>
         </details>
 
         <details class="karta">
             <summary><strong>Máte parkování u kliniky?</strong></summary>
-            <p class="muted">V okolí kliniky je možnost placeného stání v modré zóně, případně využití nedalekého parkovacího domu.</p>
+            <p class="muted">V okolí kliniky je možnost placeného stání v modré zóně, případně využití nedalekého
+                parkovacího domu.</p>
         </details>
     </section>
 </main>
 
-<!-- PATIČKA -->
 <footer class="paticka">
     <div class="container grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem">
         <div>
@@ -228,8 +241,6 @@
             <p style="font-weight:600">Kontakty</p>
             <ul class="list-reset muted">
                 <li>+420 222 111 222</li>
-                <li>info@mojeklinika.cz</li>
-                <li>U Zdraví 12, Praha 1</li>
             </ul>
         </div>
         <div>
@@ -251,24 +262,30 @@
         <strong>Studentský projekt</strong> – vytvořeno v rámci předmětu Web design, ČZU (2025).
         Autoři: Ruslan Galiaskarov, Pavel Petr, Ondřej Trita, Daniel Petrů.
     </p>
-
 </footer>
 
 <script>
     // hamburger + menu
-    const tlacitko = document.getElementById('tlacitkoMenu');
+    const tlacitko = document.getElementById('hamburger');
     const nav = document.getElementById('navigace');
 
-    tlacitko.addEventListener('click', () => {
-        const otevrene = tlacitko.getAttribute('data-open') === '1';
-        tlacitko.setAttribute('data-open', otevrene ? '0' : '1');
-        if (otevrene) nav.setAttribute('hidden', '');
-        else nav.removeAttribute('hidden');
-    });
+    if (tlacitko && nav) {
+        tlacitko.addEventListener('click', () => {
+            const otevrene = tlacitko.getAttribute('data-open') === '1';
+            tlacitko.setAttribute('data-open', otevrene ? '0' : '1');
+            if (otevrene) {
+                nav.setAttribute('hidden', '');
+            } else {
+                nav.removeAttribute('hidden');
+            }
+        });
+    }
 
     // rok v patičce
-    document.getElementById('year').textContent =
-        String(new Date().getFullYear());
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+        yearSpan.textContent = String(new Date().getFullYear());
+    }
 
     // vyhledávání
     const searchBtn = document.getElementById('searchBtn');
@@ -280,6 +297,13 @@
             if (dotaz) {
                 window.location.href =
                     `vyhledavani.html?search=${encodeURIComponent(dotaz)}`;
+            }
+        });
+
+        searchInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                searchBtn.click();
             }
         });
     }

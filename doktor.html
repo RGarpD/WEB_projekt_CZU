@@ -6,221 +6,236 @@
     <title>Moje klinika – Doktor</title>
     <link rel="icon" href="./logo.png" type="image/png">
     <link rel="stylesheet" href="./styles.css">
-
 </head>
 <body>
 
-    <!-- HLAVIČKA -->
-    <header class="hlavicka">
-        <div class="logo-box">
-            <a href="./index.html">
-                <img src="./logo.png" alt="Logo kliniky" width="592">
-            </a>
-        </div>
+<!-- HLAVIČKA  -->
+<header class="hlavicka">
 
-        <!-- tlačítko menu (hamburger) -->
-        <button id="tlacitkoMenu" class="hamburger">
+    <!-- logo + název + menu -->
+    <div class="hlavicka-r1">
+        <a href="index.html" class="brand">
+            <img src="logoMIN.png" alt="Logo kliniky" class="brand-logo">
+            <span class="brand-name">Moje&nbsp;klinika</span>
+        </a>
+
+        <!-- HAMBURGER -->
+        <button id="hamburger" class="hamburger" data-open="0">
             <span></span><span></span><span></span>
         </button>
 
-        <!-- navigace -->
+        <!-- NAVIGACE -->
         <nav id="navigace" class="menu" hidden>
-            <ul>
-                <li><a href="./index.html">Domů</a></li>
-                <li><a href="./sluzby.html">Služby</a></li>
-                <li><a href="./tym.html">Náš tým</a></li>
-                <li><a href="./cenik.html">Ceník</a></li>
-                <li><a href="./kontakt.html">Kontakt</a></li>
-            </ul>
+            <a href="index.html">Domů</a>
+            <a href="sluzby.html">Služby</a>
+            <a href="tym.html">Náš tým</a>
+            <a href="cenik.html">Ceník</a>
+            <a href="kontakt.html">Kontakt</a>
+
+            <!-- jazykové přepínátko dole v hamburgeru -->
+            <div class="menu-lang">
+                <a href="#" class="menu-lang-link jazyk-aktivni">CZ</a>
+                <span>/</span>
+                <a href="#" class="menu-lang-link">EN</a>
+            </div>
         </nav>
-        <div class="search-wrapper">
-            <label for="search" class="visually-hidden">Vyhledávání</label>
-            <input id="search" type="text" placeholder="Hledat…" class="search-input">
+    </div>
 
-            <button class="search-btn" id="searchBtn" aria-label="Vyhledat">
-                <!-- jednoduchá lupa (SVG) -->
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="7"></circle>
-                    <line x1="16" y1="16" x2="22" y2="22"></line>
-                </svg>
-            </button>
-        </div>
-
-    </header>
-
-    <!-- kontakt + jazyk -->
-    <section class="kontaktni-pruh">
-        <div class="telefon">
-            <svg viewBox="0 0 24 24" class="ikona"><path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2a1.3 1.3 0 011.4-.3 10.4 10.4 0 003.2.5 1.3 1.3 0 011.3 1.3v3.8a1.3 1.3 0 01-1.3 1.3A19.6 19.6 0 012 4.3 1.3 1.3 0 013.3 3h3.8A1.3 1.3 0 018.4 4.3c0 1.1.2 2.2.5 3.2.2.5 0 1.1-.3 1.4L6.6 10.8z" /></svg>
+    <!-- telefon + objednat se + lupa + jazyk -->
+    <div class="hlavicka-r2">
+        <div class="kontakt-info">
+            <!-- černá ikonka telefonu -->
+            <svg viewBox="0 0 24 24" class="ikona-telefon">
+                <path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2a1.3 1.3 0 011.4-.3 10.4 10.4 0 003.2.5 1.3 1.3 0 011.3 1.3v3.8a1.3 1.3 0 01-1.3 1.3A19.6 19.6 0 012 4.3 1.3 1.3 0 013.3 3h3.8A1.3 1.3 0 018.4 4.3c0 1.1.2 2.2.5 3.2.2.5 0 1.1-.3 1.4L6.6 10.8z"/>
+            </svg>
             <a href="tel:+420111222111" class="cislo">+420 111 222 111</a>
         </div>
 
-        <div class="jazyk">
-            <a href="#">CZ</a> / <a href="#">EN</a>
+        <a class="tlacitko hlavni-tlacitko" href="./objednat.html">Objednat se</a>
+
+        <div class="hlavicka-vpravo">
+            <div class="search-wrapper">
+                <label for="search" class="visually-hidden">Hledat</label>
+                <input type="text" id="search" class="search-input" placeholder="Hledat...">
+                <button id="searchBtn" class="search-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="16" y1="16" x2="22" y2="22"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="jazyk">
+                <a href="#" class="jazyk-aktivni">CZ</a> / <a href="#">EN</a>
+            </div>
         </div>
+    </div>
+</header>
+
+<!-- HLAVNÍ OBSAH -->
+<main class="obal">
+
+    <nav class="breadcrumbs">
+        <a href="./index.html">Domů</a>
+        <span>/</span>
+        <a href="./tym.html">Náš tým</a>
+        <span>/</span>
+        <span>MUDr. Lucie Králová</span>
+    </nav>
+
+    <section class="doctor-detail">
+
+        <!-- HLAVNÍ HLAVIČKA LÉKAŘE -->
+        <div class="doctor-header">
+            <div class="doctor-photo-lg">
+                <img src="./lekar1.png" alt="MUDr. Lucie Králová – praktická lékařka">
+            </div>
+
+            <div class="doctor-info">
+                <h1>MUDr. Lucie Králová</h1>
+                <p class="doctor-specialization">Praktická lékařka pro dospělé</p>
+
+                <ul class="doctor-meta">
+                    <li><strong>Pracoviště:</strong> Moje klinika, U Zdraví 12, Praha 1</li>
+                    <li><strong>Obor:</strong> všeobecné praktické lékařství</li>
+                    <li><strong>Přijímá nové pacienty:</strong> ano</li>
+                    <li><strong>Jazyky:</strong> čeština, angličtina</li>
+                </ul>
+
+                <div class="doctor-cta-row">
+                    <a href="./objednat.html" class="tlacitko">Objednat se k lékařce</a>
+                    <a href="./tym.html" class="link-secondary">Zpět na přehled lékařů</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- DALŠÍ INFORMACE V BLOCÍCH -->
+        <div class="doctor-sections">
+
+            <section class="doctor-box">
+                <h2>Ordinační hodiny</h2>
+                <ul>
+                    <li><strong>Pondělí:</strong> 8:00–14:00</li>
+                    <li><strong>Úterý:</strong> 12:00–18:00</li>
+                    <li><strong>Středa:</strong> 8:00–14:00</li>
+                    <li><strong>Čtvrtek:</strong> 8:00–13:00</li>
+                    <li><strong>Pátek:</strong> 8:00–12:00</li>
+                </ul>
+                <p class="note">Ordinační hodiny se mohou měnit, prosím vždy využij online objednání.</p>
+            </section>
+
+            <section class="doctor-box">
+                <h2>O lékařce</h2>
+                <p>
+                    MUDr. Lucie Králová se věnuje komplexní péči o dospělé pacienty.
+                    Klade důraz na prevenci, včasný záchyt onemocnění a srozumitelnou komunikaci.
+                </p>
+                <p>
+                    V ambulanci zajišťuje preventivní prohlídky, očkování, vedení pacientů
+                    s chronickými onemocněními i konzultace nálezů od specialistů.
+                </p>
+            </section>
+
+            <section class="doctor-box">
+                <h2>Vzdělání a praxe</h2>
+                <ul>
+                    <li>1. lékařská fakulta UK v Praze – všeobecné lékařství</li>
+                    <li>Atestace z všeobecného praktického lékařství</li>
+                    <li>Praxe v interních a praktických ambulancích v Praze</li>
+                    <li>Pravidelná účast na odborných konferencích a kurzech</li>
+                </ul>
+            </section>
+
+            <section class="doctor-box">
+                <h2>Čemu se věnuje</h2>
+                <ul>
+                    <li>preventivní prohlídky a očkování</li>
+                    <li>dlouhodobé sledování chronických onemocnění</li>
+                    <li>konzultace laboratorních a zobrazovacích vyšetření</li>
+                    <li>vystavování potvrzení pro zaměstnavatele a školy</li>
+                </ul>
+            </section>
+
+        </div>
+
     </section>
 
-    <!-- hlavní tlačítko -->
-    <div class="objednat">
-        <a class="tlacitko" href="./objednat.html">Objednat se</a>
+</main>
+
+<!-- PATIČKA -->
+<footer class="paticka">
+    <div class="container grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem">
+        <div>
+            <p>&copy; <span id="year"></span> Moje klinika</p>
+            <p class="muted">Moderní ambulantní péče v centru Prahy.</p>
+        </div>
+        <div>
+            <p style="font-weight:600">Kontakty</p>
+            <ul class="list-reset muted">
+                <li>+420 222 111 222</li>
+                <li>info@mojeklinika.cz</li>
+                <li>U Zdraví 12, Praha 1</li>
+            </ul>
+        </div>
+        <div>
+            <p style="font-weight:600">Rychlé odkazy</p>
+            <ul class="list-reset">
+                <li><a href="./sluzby.html">Služby</a></li>
+                <li><a href="./objednat.html">Rezervace</a></li>
+                <li><a href="./kontakt.html">Kontakt</a></li>
+                <li><a href="#">Ochrana osobních údajů</a></li>
+            </ul>
+        </div>
+        <div>
+            <p style="font-weight:600">Otevírací doba recepce</p>
+            <p class="muted">Po–Pá 7:30–17:30</p>
+        </div>
     </div>
 
-    <!-- HLAVNÍ OBSAH -->
-    <main class="obal">
+    <p class="muted" style="margin-top:1rem;">
+        <strong>Studentský projekt</strong> – vytvořeno v rámci předmětu Web design, ČZU (2025).
+        Autoři: Ruslan Galiaskarov, Pavel Petr, Ondřej Trita, Daniel Petrů.
+    </p>
+</footer>
 
-        <nav class="breadcrumbs">
-            <a href="./index.html">Domů</a>
-            <span>/</span>
-            <a href="./tym.html">Náš tým</a>
-            <span>/</span>
-            <span>MUDr. Lucie Králová</span>
-        </nav>
+<script>
+    // hamburger + menu
+    const tlacitko = document.getElementById('hamburger');
+    const nav = document.getElementById('navigace');
 
-        <section class="doctor-detail">
-
-            <!-- HLAVNÍ HLAVIČKA LÉKAŘE -->
-            <div class="doctor-header">
-                <div class="doctor-photo-lg">
-                    <img src="./lekar1.png" alt="MUDr. Lucie Králová – praktická lékařka">
-                </div>
-
-                <div class="doctor-info">
-                    <h1>MUDr. Lucie Králová</h1>
-                    <p class="doctor-specialization">Praktická lékařka pro dospělé</p>
-
-                    <ul class="doctor-meta">
-                        <li><strong>Pracoviště:</strong> Moje klinika, U Zdraví 12, Praha 1</li>
-                        <li><strong>Obor:</strong> všeobecné praktické lékařství</li>
-                        <li><strong>Přijímá nové pacienty:</strong> ano</li>
-                        <li><strong>Jazyky:</strong> čeština, angličtina</li>
-                    </ul>
-
-                    <div class="doctor-cta-row">
-                        <a href="./objednat.html" class="tlacitko">Objednat se k lékařce</a>
-                        <a href="./tym.html" class="link-secondary">Zpět na přehled lékařů</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- DALŠÍ INFORMACE V BLOCÍCH -->
-            <div class="doctor-sections">
-
-                <section class="doctor-box">
-                    <h2>Ordinační hodiny</h2>
-                    <ul>
-                        <li><strong>Pondělí:</strong> 8:00–14:00</li>
-                        <li><strong>Úterý:</strong> 12:00–18:00</li>
-                        <li><strong>Středa:</strong> 8:00–14:00</li>
-                        <li><strong>Čtvrtek:</strong> 8:00–13:00</li>
-                        <li><strong>Pátek:</strong> 8:00–12:00</li>
-                    </ul>
-                    <p class="note">Ordinační hodiny se mohou měnit, prosím vždy využij online objednání.</p>
-                </section>
-
-                <section class="doctor-box">
-                    <h2>O lékařce</h2>
-                    <p>
-                        MUDr. Lucie Králová se věnuje komplexní péči o dospělé pacienty.
-                        Klade důraz na prevenci, včasný záchyt onemocnění a srozumitelnou komunikaci.
-                    </p>
-                    <p>
-                        V ambulanci zajišťuje preventivní prohlídky, očkování, vedení pacientů
-                        s chronickými onemocněními i konzultace nálezů od specialistů.
-                    </p>
-                </section>
-
-                <section class="doctor-box">
-                    <h2>Vzdělání a praxe</h2>
-                    <ul>
-                        <li>1. lékařská fakulta UK v Praze – všeobecné lékařství</li>
-                        <li>Atestace z všeobecného praktického lékařství</li>
-                        <li>Praxe v interních a praktických ambulancích v Praze</li>
-                        <li>Pravidelná účast na odborných konferencích a kurzech</li>
-                    </ul>
-                </section>
-
-                <section class="doctor-box">
-                    <h2>Čemu se věnuje</h2>
-                    <ul>
-                        <li>preventivní prohlídky a očkování</li>
-                        <li>dlouhodobé sledování chronických onemocnění</li>
-                        <li>konzultace laboratorních a zobrazovacích vyšetření</li>
-                        <li>vystavování potvrzení pro zaměstnavatele a školy</li>
-                    </ul>
-                </section>
-
-            </div>
-
-        </section>
-
-    </main>
-
-        <!-- PATIČKA -->
-        <footer class="paticka">
-            <div class="container grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem">
-                <div>
-                    <p>&copy; <span id="year"></span> Moje klinika</p>
-                    <p class="muted">Moderní ambulantní péče v centru Prahy.</p>
-                </div>
-                <div>
-                    <p style="font-weight:600">Kontakty</p>
-                    <ul class="list-reset muted">
-                        <li>+420 222 111 222</li>
-                        <li>info@mojeklinika.cz</li>
-                        <li>U Zdraví 12, Praha 1</li>
-                    </ul>
-                </div>
-                <div>
-                    <p style="font-weight:600">Rychlé odkazy</p>
-                    <ul class="list-reset">
-                        <li><a href="./sluzby.html">Služby</a></li>
-                        <li><a href="./objednat.html">Rezervace</a></li>
-                        <li><a href="./kontakt.html">Kontakt</a></li>
-                        <li><a href="#">Ochrana osobních údajů</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <p style="font-weight:600">Otevírací doba recepce</p>
-                    <p class="muted">Po–Pá 7:30–17:30</p>
-                    </div>
-            </div>
-
-            <p class="muted" style="margin-top:1rem;">
-                <strong>Studentský projekt</strong> – vytvořeno v rámci předmětu Web design, ČZU (2025).
-                Autoři: Ruslan Galiaskarov, Pavel Petr, Ondřej Trita, Daniel Petrů.
-            </p>
-        </footer>
-
-    <script>
-        // hamburger + menu
-        const tlacitko = document.getElementById('tlacitkoMenu');
-        const nav = document.getElementById('navigace');
-
+    if (tlacitko && nav) {
         tlacitko.addEventListener('click', () => {
             const otevrene = tlacitko.getAttribute('data-open') === '1';
             tlacitko.setAttribute('data-open', otevrene ? '0' : '1');
-            if (otevrene) nav.setAttribute('hidden', '');
-            else nav.removeAttribute('hidden');
+            if (otevrene) {
+                nav.setAttribute('hidden', '');
+            } else {
+                nav.removeAttribute('hidden');
+            }
         });
+    }
 
-        // rok v patičce
-        document.getElementById('year').textContent =
-            String(new Date().getFullYear());
+    // rok v patičce
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+        yearSpan.textContent = String(new Date().getFullYear());
+    }
 
-        // vyhledávání
-        const searchBtn = document.getElementById('searchBtn');
-        const searchInput = document.getElementById('search');
+    // vyhledávání
+    const searchBtn = document.getElementById('searchBtn');
+    const searchInput = document.getElementById('search');
 
-        if (searchBtn && searchInput) {
-            searchBtn.addEventListener('click', () => {
-                const dotaz = searchInput.value.trim();
-                if (dotaz) {
-                    window.location.href =
-                        `vyhledavani.html?search=${encodeURIComponent(dotaz)}`;
-                }
-            });
-        }
-    </script>
+    if (searchBtn && searchInput) {
+        searchBtn.addEventListener('click', () => {
+            const dotaz = searchInput.value.trim();
+            if (dotaz) {
+                window.location.href =
+                    `vyhledavani.html?search=${encodeURIComponent(dotaz)}`;
+            }
+        });
+    }
+</script>
 
 </body>
 </html>
