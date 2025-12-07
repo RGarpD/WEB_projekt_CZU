@@ -1165,3 +1165,169 @@ aside.card {
     height: 1px;
     overflow: hidden;
 }
+/* ================== HLAVIČKA – vyhledávání ================== */
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
+.search-input {
+    width: 9rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid #ccd4e0;
+    font-size: 0.9rem;
+    outline: none;
+    background: #fff;
+    transition: 0.2s ease;
+}
+
+.search-input:focus {
+    border-color: var(--barva-modra);
+    box-shadow: 0 0 0 2px rgba(0, 120, 215, 0.25);
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #ccd4e0;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.search-btn:hover {
+    background: var(--barva-seda);
+}
+
+.search-btn svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    color: #002b5c;
+}
+
+@media (max-width: 768px) {
+    .search-wrapper {
+        width: 100%;
+        margin: 0.5rem 0 0;
+    }
+
+    .search-input {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+
+/* ================== VÝSLEDKY VYHLEDÁVÁNÍ ================== */
+
+.vyhledavani-nadpis {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.vyhledavani-sekce {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    background: #f7f9fc;
+}
+
+.vyhledavani-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.vyhledavani-info {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: #52606d;
+}
+
+.vyhledavani-info strong {
+    color: var(--barva-modra);
+}
+
+.search-results {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* LI = jen obal, bez vizuálu */
+.search-result {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+/* A = celá karta, klikatelné pole */
+.search-result-link {
+    display: block;
+    padding: 1rem 1.25rem;
+    border-radius: .6rem;
+    border: 1px solid #e1e7f0;
+    background: #ffffff;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 2px 4px rgba(15, 23, 42, 0.04);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.search-result-link:hover {
+    transform: translateY(-2px);
+    border-color: var(--barva-modra);
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+}
+
+.search-result-title {
+    margin: 0 0 .35rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--barva-modra);
+}
+
+.search-result-title:hover {
+    text-decoration: underline;
+}
+
+.search-result-desc {
+    margin: 0.35rem 0 0.4rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #4b5563;
+}
+
+.search-result-meta {
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+    .vyhledavani-sekce {
+        padding-top: 1.5rem;
+        padding-bottom: 2rem;
+    }
+}
+.search-result-meta a {
+    text-decoration: none !important;
+}
+
+.search-result-meta a:hover {
+    text-decoration: none !important;
+}
+

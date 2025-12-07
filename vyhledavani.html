@@ -29,9 +29,17 @@
         </ul>
     </nav>
 
-    <div class="search-box">
+    <div class="search-wrapper">
         <label for="search" class="visually-hidden">Vyhledávání</label>
         <input id="search" type="text" placeholder="Hledat…" class="search-input">
+
+        <button class="search-btn" id="searchBtn" aria-label="Vyhledat">
+            <!-- jednoduchá lupa (SVG) -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="7"></circle>
+                <line x1="16" y1="16" x2="22" y2="22"></line>
+            </svg>
+        </button>
     </div>
 </header>
 
@@ -39,37 +47,57 @@
 <main class="obsah">
 
     <section class="uvod">
-        <h1>Výsledky vyhledávání</h1>
-        <p class="subtitle">Hledaný výraz: <strong>„praktický lékař“</strong></p>
+        <h1 class="vyhledavani-nadpis">Výsledky vyhledávání</h1>
+        <p class="subtitle">
+            Hledaný výraz: <strong id="searchQuery"></strong>
+        </p>
     </section>
 
-    <section class="vysledky">
+    <section class="vysledky vyhledavani-sekce">
+        <div class="vyhledavani-container">
+            <ul class="search-results">
 
-        <article class="karta">
-            <h2><a href="sluzby-1.html">Praktický lékař</a></h2>
-            <p>Komplexní preventivní a diagnostická péče pro dospělé. Objednejte se na preventivní prohlídku nebo konzultaci.</p>
-        </article>
+                <li class="search-result">
+                    <a href="sluzby-1.html" class="search-result-link">
+                        <h3 class="search-result-title">Praktický lékař</h3>
+                        <p class="search-result-desc">
+                            Komplexní preventivní a diagnostická péče pro dospělé. Objednejte se na preventivní prohlídku nebo konzultaci.
+                        </p>
+                        <span class="search-result-meta">Stránka služby · Služby</span>
+                    </a>
+                </li>
 
-        <article class="karta">
-            <h2><a href="doktor.html">MUDr. Jana Nováková – Praktická lékařka</a></h2>
-            <p>Specialistka na preventivní medicínu a dlouhodobou péči o dospělé pacienty.</p>
-        </article>
+                <li class="search-result">
+                    <a href="doktor.html" class="search-result-link">
+                        <h3 class="search-result-title">MUDr. Jana Nováková – Praktická lékařka</h3>
+                        <p class="search-result-desc">
+                            Specialista na preventivní medicínu a dlouhodobou péči o dospělé pacienty.
+                        </p>
+                        <span class="search-result-meta">Profil lékaře · Náš tým</span>
+                    </a>
+                </li>
 
-        <article class="karta">
-            <h2><a href="cenik.html">Ceník – Preventivní vyšetření</a></h2>
-            <p>Ceny diagnostických a preventivních služeb včetně očkování a laboratorních vyšetření.</p>
-        </article>
+                <li class="search-result">
+                    <a href="cenik.html" class="search-result-link">
+                        <h3 class="search-result-title">Ceník – Preventivní vyšetření</h3>
+                        <p class="search-result-desc">
+                            Ceny diagnostických a preventivních služeb včetně očkování a laboratorních vyšetření.
+                        </p>
+                        <span class="search-result-meta">Informace o cenách</span>
+                    </a>
+                </li>
 
-        <article class="karta">
-            <h2><a href="kontakt.html">Kontakt – Objednání k lékaři</a></h2>
-            <p>Kudy k nám, otevírací doba, telefonní číslo a další informace pro rychlé objednání.</p>
-        </article>
-
-    </section>
-
-    <section class="nic-nenalezeno" hidden>
-        <h2>Nebyly nalezeny žádné výsledky</h2>
-        <p>Zkuste upravit hledaný výraz nebo přejděte na stránku <a href="sluzby.html">Služby</a>.</p>
+                <li class="search-result">
+                    <a href="kontakt.html" class="search-result-link">
+                        <h3 class="search-result-title">Kontakt – Objednání k lékaři</h3>
+                        <p class="search-result-desc">
+                            Kudy k nám, otevírací doba, telefonní číslo a další informace pro rychlé objednání.
+                        </p>
+                        <span class="search-result-meta">Kontakt · Otevírací doba</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </section>
 
 </main>
@@ -86,19 +114,45 @@
 </footer>
 
 <script>
-    // hamburger menu
+    // hamburger + menu
     const tlacitko = document.getElementById('tlacitkoMenu');
     const nav = document.getElementById('navigace');
 
     tlacitko.addEventListener('click', () => {
         const otevrene = tlacitko.getAttribute('data-open') === '1';
         tlacitko.setAttribute('data-open', otevrene ? '0' : '1');
-        if (otevrene) nav.removeAttribute('hidden');
-        else nav.setAttribute('hidden', '');
+        if (otevrene) nav.setAttribute('hidden', '');
+        else nav.removeAttribute('hidden');
     });
 
     // rok v patičce
-    document.getElementById('year').textContent = String(new Date().getFullYear());
+    document.getElementById('year').textContent =
+        String(new Date().getFullYear());
+
+    // vyhledávání
+    const searchBtn = document.getElementById('searchBtn');
+    const searchInput = document.getElementById('search');
+
+    if (searchBtn && searchInput) {
+        searchBtn.addEventListener('click', () => {
+            const dotaz = searchInput.value.trim();
+            if (dotaz) {
+                window.location.href =
+                    `vyhledavani.html?search=${encodeURIComponent(dotaz)}`;
+            }
+        });
+    }
+</script>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const hledani = params.get('search') || '';
+    const target = document.getElementById('searchQuery');
+
+    if (target) {
+        const text = hledani.trim();
+        target.textContent = text === '' ? '—' : text;
+    }
 </script>
 
 </body>

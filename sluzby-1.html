@@ -33,6 +33,19 @@
                 <li><a href="./kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
+        <div class="search-wrapper">
+            <label for="search" class="visually-hidden">Vyhledávání</label>
+            <input id="search" type="text" placeholder="Hledat…" class="search-input">
+
+            <button class="search-btn" id="searchBtn" aria-label="Vyhledat">
+                <!-- jednoduchá lupa (SVG) -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <line x1="16" y1="16" x2="22" y2="22"></line>
+                </svg>
+            </button>
+        </div>
+
     </header>
 
     <!-- kontakt + jazyk -->
@@ -162,21 +175,36 @@
             </p>
         </footer>
 
-        <!-- jednoduchý skript pro menu a rok -->
-        <script>
-            const tlacitko = document.getElementById('tlacitkoMenu');
-            const nav = document.getElementById('navigace');
+    <script>
+        // hamburger + menu
+        const tlacitko = document.getElementById('tlacitkoMenu');
+        const nav = document.getElementById('navigace');
 
-            tlacitko.addEventListener('click', () => {
-                const otevrene = tlacitko.getAttribute('data-open') === '1';
-                tlacitko.setAttribute('data-open', otevrene ? '0' : '1');
-                if (otevrene) nav.setAttribute('hidden', '');
-                else nav.removeAttribute('hidden');
+        tlacitko.addEventListener('click', () => {
+            const otevrene = tlacitko.getAttribute('data-open') === '1';
+            tlacitko.setAttribute('data-open', otevrene ? '0' : '1');
+            if (otevrene) nav.setAttribute('hidden', '');
+            else nav.removeAttribute('hidden');
+        });
+
+        // rok v patičce
+        document.getElementById('year').textContent =
+            String(new Date().getFullYear());
+
+        // vyhledávání
+        const searchBtn = document.getElementById('searchBtn');
+        const searchInput = document.getElementById('search');
+
+        if (searchBtn && searchInput) {
+            searchBtn.addEventListener('click', () => {
+                const dotaz = searchInput.value.trim();
+                if (dotaz) {
+                    window.location.href =
+                        `vyhledavani.html?search=${encodeURIComponent(dotaz)}`;
+                }
             });
-
-            document.getElementById('year').textContent = String(new Date().getFullYear());
-
-        </script>
+        }
+    </script>
 
 </body>
 </html>
