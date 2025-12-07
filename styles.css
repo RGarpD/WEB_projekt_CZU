@@ -1317,3 +1317,9 @@ a:hover { text-decoration: underline; }
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
+@media (min-width: 960px) {
+    .hlavicka-r2 .jazyk {
+        display: none !important;
+    }
+}
